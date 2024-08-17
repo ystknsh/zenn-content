@@ -3,7 +3,8 @@ title: "指定したプロファイル(Google Chrome)でURLを開く方法（Mac
 emoji: "🔰"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Raycast", "googlechrome", "mac"]
-published: true
+published: false
+publication_name: raycast_jp
 ---
 
 Raycast[^1] を利用して、指定したプロファイル(Google Chrome)でURLを開く方法を紹介します。 
