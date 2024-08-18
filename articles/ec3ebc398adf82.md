@@ -3,7 +3,7 @@ title: "指定したプロファイル(Google Chrome)でURLを開く方法（Mac
 emoji: "🔰"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Raycast", "googlechrome", "mac"]
-published: false
+published: true
 publication_name: raycast_jp
 ---
 
