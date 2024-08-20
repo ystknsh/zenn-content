@@ -7,7 +7,7 @@ published: true
 publication_name: raycast_jp
 ---
 
-Raycast[^1] を利用して、指定したプロファイル(Google Chrome)でURLを開く方法を紹介します。 
+Mac 向け Launcher アプリ Raycast[^1] を利用して、指定したプロファイル(Google Chrome) でURLを開く方法を紹介します。 
 この方法を使えば、複数のChromeプロファイルを使い分けている場合でも、ワンアクションで目的のウェブページを開くことができます。
 
 [^1]: Raycast (Mac 向け Launcher アプリ)
@@ -54,8 +54,8 @@ URL="https://track.toggl.com/timer"
 PROFILE="Profile 2"
 ```
 ## プロファイルの確認方法
-指定したいプロファイルのChrome の検索窓に `chrome://version/` と入力します。  
-`プロフィールパス`の最後が目的のプロファイル番号です。えこの図では `Profile 2` となっております。
+指定したいプロファイルの状態でChrome の検索窓に `chrome://version/` と入力します。  
+`プロフィールパス`の最後の部分が目的のプロファイル番号です。この図では `Profile 2` となっております。
 
 ![](/images/raycast_chrome/chrome_profile.png)
 
@@ -65,6 +65,7 @@ PROFILE="Profile 2"
 ```bash
 open -na "Google Chrome" --args --profile-directory="$PROFILE" "$URL"
 ```
+
 # 参考文献
 ## Scripts Commands の設定方法
 https://qiita.com/caslinden/items/7c7834df2cdb2e2e2c99#raycastでのスクリプトコマンド
