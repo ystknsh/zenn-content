@@ -11,6 +11,20 @@ publication_name: raycast_jp
 
 この記事では発表資料から抜粋して紹介するため、詳細については当日の発表資料を参考にしていただけると幸いです。
 
+## 発表資料
+@[slideshare](1Y9U74QH5nb9nv)
+
+**目次**
+1. Intro
+2. Settings
+3. Basic Commands
+4. Clipboard History
+5. Window Management
+6. Snippets
+7. QuickLinks
+8. Summery
+9. Q&A
+
 ## Clipboard History - p.23〜
 コピーした項目を自動的に保存し、簡単にアクセスできるようにする機能です。テキストだけでなく、画像、ファイルなども対象です。Type（テキスト、画像ファイル等）を絞って素早く検索することができます。
 
@@ -68,20 +82,6 @@ publication_name: raycast_jp
   - 特定のリポジトリを開く
     - Link：`適当なリポジトリのディレクトリ`
     - Open with: `Visual Studio Code` 等のIDE
-
-## 発表資料
-@[slideshare](1Y9U74QH5nb9nv)
-
-**目次**
-1. Intro
-2. Settings
-3. Basic Commands
-4. Clipboard History
-5. Window Management
-6. Snippets
-7. QuickLinks
-8. Summery
-9. Q&A
 
 ## そのほかの発表資料はこちら
 https://zenn.dev/raycast_jp/articles/2024-08-22-raycast-japan-presentaion-material
