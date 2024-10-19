@@ -21,7 +21,7 @@ published_at: 2024-08-31 # 過去の日時を指定する
 発表者: Michitoshi Yano
 @[slideshare](ynwKdxPBBSkyNf)
 
-## 今日から始めるHappyHackingRaycastLife
+## 今日から始める Happy Hacking Raycast Life
 発表者: Taiki Yamaguchi
 @[slideshare](1Y9U74QH5nb9nv)
 
