@@ -3,7 +3,7 @@ title: "今日から使える！Raycast 4つの活用法"
 emoji: "⏳"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [raycast]
-published: false
+published: true
 publication_name: raycast_jp
 ---
 

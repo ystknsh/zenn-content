@@ -3,7 +3,7 @@ title: "Raycast Meetup Japan #0 発表資料 (2024年08月22日)"
 emoji: "🎁"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [raycast]
-published: false
+published: true
 publication_name: raycast_jp
 published_at: 2024-08-31 # 過去の日時を指定する
 ---
