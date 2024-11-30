@@ -8,6 +8,7 @@ published: false
 ---
 
 2024年11月23日(土)、東京・大崎にあるファインディ株式会社様のイベントスペースにて「Fullstack AI Dev & Raycast Summit feat. Satoshi Nakajima」を開催いたしました。
+
 DevX/Raycast Community Japan、シンギュラリティ・ソサエティ 初の大規模イベントとして、Fullstack AI ツール「GraphAI」、生産性向上ツール「Raycast」、LLMアプリケーション開発フレームワーク「LangChain」等をテーマに、第一線で活躍する登壇者をお迎えし、多くの参加者の皆様にご来場いただきました。
 
 # 1. イベントの目的・成果
@@ -26,8 +27,8 @@ DevX/Raycast Community Japan、シンギュラリティ・ソサエティ 初の
 ## 2.1. アーカイブ動画 / Toggeter
 アーカイブ動画は YouTubeにて、参加者の皆さんの声は Toggeter にて公開しております。
 
-- YouTube: https://www.youtube.com/live/sPTnyuO9OCA?feature=shared
-- Toggeter: https://togetter.com/li/2470205
+https://www.youtube.com/live/sPTnyuO9OCA?feature=shared
+https://togetter.com/li/2470205
 
 ## 2.2. 基調講演: 中島聡氏 Declarative Dataflow Programming For Agentic Workflow (AI Agents)
 中島氏より アイディアソン/ハッカソンの紹介、GraphAI プロジェクトの紹介がありました。[YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?feature=shared&t=727)
