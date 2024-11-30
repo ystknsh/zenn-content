@@ -1,8 +1,9 @@
 ---
 title: "Fullstack Al Dev & Raycast Summit feat. Satoshi Nakajima イベントレポート（2024-11-23開催）"
-emoji: "📈"
+emoji: "🚀"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ai, llm, raycast, graphai]
+publication_name: raycast_jp
 published: false
 ---
 
