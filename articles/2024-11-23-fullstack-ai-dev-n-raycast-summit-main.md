@@ -131,15 +131,10 @@ AIへの危機感については、AIの誤作動への対応や、人間の判�
 # 4. 次回イベントに向けて
 次回イベントの詳細は、connpass / 各種SNS にて随時お知らせいたします。引き続き、コミュニティの発展にご協力いただけますと幸いです。
 
-https://raycast.connpass.com/event/335759/
+https://raycast.connpass.com
 
-Raycast Community Japan の Slackは、こちらから参加できます！
-https://join.slack.com/t/raycastcommunityjapan/shared_invite/zt-2o0futx5u-BMDYt7shHqAT2Fa82SPLfQ
+Raycast Community Japan の Slackは、[こちら](https://join.slack.com/t/raycastcommunityjapan/shared_invite/zt-2o0futx5u-BMDYt7shHqAT2Fa82SPLfQ) から参加できます！
 
 Xのフォローもよろしくお願いします！！
-
-Raycast Community Japan
-https://x.com/Raycast0731/
-
-Singularity Society
-https://x.com/SingularitySoci
+- [Raycast Community Japan](https://x.com/Raycast0731/)
+- [Singularity Society](https://x.com/SingularitySoci)
