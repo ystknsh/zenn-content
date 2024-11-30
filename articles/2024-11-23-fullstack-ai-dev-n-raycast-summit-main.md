@@ -30,8 +30,11 @@ DevX/Raycast Community Japan、シンギュラリティ・ソサエティ 初の
 - Toggeter: https://togetter.com/li/2470205
 
 ## 2.2. 基調講演: 中島聡氏 Declarative Dataflow Programming For Agentic Workflow (AI Agents)
-中島氏より アイディアソン/ハッカソンの紹介、GraphAI プロジェクトの紹介がありました。  
-[YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?feature=shared&t=727)
+中島氏より アイディアソン/ハッカソンの紹介、GraphAI プロジェクトの紹介がありました。[YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?feature=shared&t=727)
+
+:::details 中島聡氏 プロフィール
+工学修士（早稲田大学）、MBA（ワシントン大学）。1989年に渡米し、ソフトウェアアーキテクトとしてMicrosoft本社で Windows 95、Internet Explorer 3.0/4.0 を開発。2000年に UIEvolution を起業、04年にスクウェア・エニックスに売却。07年に MBO で買い戻したのち、車載機向けのソフトウェア会社 Xevo Inc. として成功させ19年に Lear に売却。主な著書に「なぜ、あなたの仕事は終わらないのか」（15万部）。メルマガ「週刊 Life is Beautiful」を発行。現在は、GraphAIの開発に従事。一般社団法人シンギュラリティ・ソサエティ代表理事
+:::
 
 ### 2.2.1. AGIの時代が目前に
 中島氏は冒頭、AI研究者たちの間で「3年後にはAGIの時代が来る」という予測が共有されていることを指摘。ほとんどの人が「それはないだろう」と感じているこの予測について、「実際にAIを作っている人たちが言い始めているということがすごく重要」と強調されました。  
@@ -39,9 +42,8 @@ DevX/Raycast Community Japan、シンギュラリティ・ソサエティ 初の
 また、このAI革命による社会変革について、過去のインターネット革命を例に挙げながら説明。Amazonが既存の書店チェーンからビジネスを奪い、さらに書籍以外の分野へと拡大していったように、AIによって「そういうバリューマイグレーション（価値の移行）が、あらゆる業種で起こるだろう」と予測されました。
 
 ### 2.2.2. GraphAI について
-オープンソースプロジェクトとして開発が進められている GraphAI の紹介とその効果について説明がありました。
+オープンソースプロジェクトとして開発が進められている [GraphAI](https://github.com/receptron/graphai) の紹介とその効果について説明がありました。
 - 宣言型の非同期データフロー実行エンジン（オープンソースプロジェクト）
-  https://github.com/receptron/graphai
 - JSONやYAMLで記述可能なデータフローグラフ
 - 非同期処理の最適化が特徴
   - 複雑な依存関係を持つタスクを効率的に実行
@@ -53,10 +55,8 @@ DevX/Raycast Community Japan、シンギュラリティ・ソサエティ 初の
 一般向けのアイディアソン、エンジニア向けのハッカソンの紹介がありました。  
 詳細なルールについては以下の GitHub にて公開されております。みなさん奮って参加ください。
 
-- 2024年12月 アイディアソン開催
-  https://github.com/snakajima/life-is-beautiful?tab=readme-ov-file#アイデアソン締め切り2024年12月31日
-- 2025年3月頃　ハッカソンを開催予定
-  https://github.com/snakajima/life-is-beautiful?tab=readme-ov-file#ハッカソン締め切り2025年3月中旬
+- 2024年12月 アイディアソン開催 [詳細はこちら(GitHub)](https://github.com/snakajima/life-is-beautiful?tab=readme-ov-file#アイデアソン締め切り2024年12月31日)
+- 2025年3月頃　ハッカソンを開催予定 [詳細はこちら(GitHub)](https://github.com/snakajima/life-is-beautiful?tab=readme-ov-file#ハッカソン締め切り2025年3月中旬)
   - お題
     - 1. AI-native 音声版 Instagram（プロダクト開発）
     - 2. GraphAIのWebインターフェイス（オープンソース・プロジェクト）
@@ -64,8 +64,11 @@ DevX/Raycast Community Japan、シンギュラリティ・ソサエティ 初の
     - 4. AI-native辞書（プロダクト開発）
 
 ## 2.3. パネルディスカッション: 中島聡氏 x 小飼弾氏
-中島氏、小飼氏によるパネルディスカッションを行いました。
-[YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?feature=shared&t=15060)
+中島氏、小飼氏によるパネルディスカッションを行いました。[YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?feature=shared&t=15060)
+
+:::details 小飼弾氏 プロフィール
+株式会社オン・ザ・エッヂ(後のライブドア)の取締役最高技術責任者(CTO)を務め、同社の上場に貢献。著書に『小飼弾の「仕組み」進化論』(日本実業出版社)、『「中卒」でもわかる科学入門』『子供の科学完全読本 1924-1945』(誠文堂新光社)など。ニコニコチャンネル「小飼弾の論弾」で、毎月2回、時事ニュース解説や科学・IT解説などをライブ配信中
+:::
 
 ### テーマ1: 今、AI分野で起業や事業を立ち上げるならどんな事業ドメインでどんなサービスを作るか
 中島氏は、AIを前提としたサービス設計、つまり「AIネイティブ」な発想での事業展開を提案しました。既存のサービスをAI化するのではなく、最初からAIを組み込んだ形でサービスをデザインすることで、全く新しい価値を生み出せると指摘しました。例として、AIネイティブな辞書や音声版インスタグラム、AIネイティブな冷蔵庫などが挙がりました。
