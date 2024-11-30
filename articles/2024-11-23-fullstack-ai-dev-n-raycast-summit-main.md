@@ -31,9 +31,11 @@ https://www.youtube.com/live/sPTnyuO9OCA?feature=shared
 https://togetter.com/li/2470205
 
 ## 2.2. 基調講演: 中島聡氏 Declarative Dataflow Programming For Agentic Workflow (AI Agents)
-中島氏より アイディアソン/ハッカソンの紹介、GraphAI プロジェクトの紹介がありました。[YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?feature=shared&t=727)
+中島氏より アイディアソン/ハッカソンの紹介、GraphAI プロジェクトの紹介がありました。  
+[YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?feature=shared&t=727)
 
-:::details 中島聡氏 プロフィール
+:::message
+**中島聡氏 プロフィール**  
 工学修士（早稲田大学）、MBA（ワシントン大学）。1989年に渡米し、ソフトウェアアーキテクトとしてMicrosoft本社で Windows 95、Internet Explorer 3.0/4.0 を開発。2000年に UIEvolution を起業、04年にスクウェア・エニックスに売却。07年に MBO で買い戻したのち、車載機向けのソフトウェア会社 Xevo Inc. として成功させ19年に Lear に売却。主な著書に「なぜ、あなたの仕事は終わらないのか」（15万部）。メルマガ「週刊 Life is Beautiful」を発行。現在は、GraphAIの開発に従事。一般社団法人シンギュラリティ・ソサエティ代表理事
 :::
 
@@ -65,9 +67,11 @@ https://togetter.com/li/2470205
     - 4. AI-native辞書（プロダクト開発）
 
 ## 2.3. パネルディスカッション: 中島聡氏 x 小飼弾氏
-中島氏、小飼氏によるパネルディスカッションを行いました。[YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?feature=shared&t=15060)
+中島氏、小飼氏によるパネルディスカッションを行いました。  
+[YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?feature=shared&t=15060)
 
-:::details 小飼弾氏 プロフィール
+:::message
+**小飼弾氏 プロフィール**  
 株式会社オン・ザ・エッヂ(後のライブドア)の取締役最高技術責任者(CTO)を務め、同社の上場に貢献。著書に『小飼弾の「仕組み」進化論』(日本実業出版社)、『「中卒」でもわかる科学入門』『子供の科学完全読本 1924-1945』(誠文堂新光社)など。ニコニコチャンネル「小飼弾の論弾」で、毎月2回、時事ニュース解説や科学・IT解説などをライブ配信中
 :::
 
@@ -131,10 +135,14 @@ AIへの危機感については、AIの誤作動への対応や、人間の判�
 # 4. 次回イベントに向けて
 次回イベントの詳細は、connpass / 各種SNS にて随時お知らせいたします。引き続き、コミュニティの発展にご協力いただけますと幸いです。
 
+- conpass
+
 https://raycast.connpass.com
 
-Raycast Community Japan の Slackは、[こちら](https://join.slack.com/t/raycastcommunityjapan/shared_invite/zt-2o0futx5u-BMDYt7shHqAT2Fa82SPLfQ) から参加できます！
+- Slack
+Raycast Community Japan の Slackは、[こちら(Slack)](https://join.slack.com/t/raycastcommunityjapan/shared_invite/zt-2o0futx5u-BMDYt7shHqAT2Fa82SPLfQ) から参加できます！
 
+- X
 Xのフォローもよろしくお願いします！！
-- [Raycast Community Japan](https://x.com/Raycast0731/)
-- [Singularity Society](https://x.com/SingularitySoci)
+  - Raycast Community Japan [こちら(X)](https://x.com/Raycast0731/)
+  - Singularity Society [こちら(X)](https://x.com/SingularitySoci)
