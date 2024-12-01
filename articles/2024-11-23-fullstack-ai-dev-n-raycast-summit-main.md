@@ -9,7 +9,17 @@ published: false
 
 2024年11月23日(土)、東京・大崎にあるファインディ株式会社様のイベントスペースにて「Fullstack AI Dev & Raycast Summit feat. Satoshi Nakajima」を開催いたしました。
 
-DevX/Raycast Community Japan、シンギュラリティ・ソサエティ 初の大規模イベントとして、Fullstack AI ツール「GraphAI」、生産性向上ツール「Raycast」、LLMアプリケーション開発フレームワーク「LangChain」等をテーマに、第一線で活躍する登壇者をお迎えし、多くの参加者の皆様にご来場いただきました。
+[DevX/Raycast Community Japan](https://devx.jp)、[シンギュラリティ・ソサエティ](https://singularitysociety.org) 初の大規模イベントとして、Fullstack AI ツール「GraphAI[^1]」、生産性向上ツール「Raycast[^2]」、LLMアプリケーション開発フレームワーク「LangChain[^3]」等をテーマに、第一線で活躍する登壇者をお迎えし、多くの参加者の皆様にご来場いただきました。
+
+[^1]: GraphAI: https://github.com/receptron/graphai  
+        TypeScriptで書かれた単機能のAgentと呼ばれるプログラムを、YAMLやJSONファイルに書かれたデータフローグラフの法則に従って順次非同期に実行するプログラムのエンジンです。オープンソースプロジェクトとして開発が進められています。詳しい説明は本イベントの基調講演を参照。
+
+[^2]: Raycast: https://www.raycast.com
+        Y Combinator発のMacでの作業効率を最大化する次世代生産性向上ツールです。
+
+[^3]: 人気のAI開発ツール「LangChain」をより使いやすく進化させた「LangGraph」がある。
+        LangChain: LLMアプリケーション開発のためのPythonフレームワーク
+        LangGraph: LangChainを拡張した有向グラフベースのフレームワーク
 
 # 1. イベントの目的・成果
 本イベントは以下の目的で企画しました。
@@ -27,7 +37,7 @@ DevX/Raycast Community Japan、シンギュラリティ・ソサエティ 初の
 ## 2.1. アーカイブ動画 / Toggeter
 アーカイブ動画は YouTubeにて、参加者の皆さんの声は Toggeter にて公開しております。
 
-https://www.youtube.com/live/sPTnyuO9OCA?feature=shared
+https://www.youtube.com/live/sPTnyuO9OCA?feature=shared&t=113
 https://togetter.com/li/2470205
 
 ## 2.2. 基調講演: 中島聡氏 Declarative Dataflow Programming For Agentic Workflow (AI Agents)
@@ -54,25 +64,29 @@ https://togetter.com/li/2470205
 - Static Node と Computed Node で構成
 - ループ機能による複雑な処理の実現
 
-### 2.2.3. アイディアソン / ハッカソン
-一般向けのアイディアソン、エンジニア向けのハッカソンの紹介がありました。  
+### 2.2.3. アイディアソン / コントリビューション・フェス
+一般向けのアイディアソン、エンジニア向けのコントリビューション・フェス (注: 11/23のイベント中ではハッカソンと紹介していましたが、2024/11/30 名称の変更、お題の追加、ルール詳細の追加等がありました。)の紹介がありました。  
 詳細なルールについては以下の GitHub にて公開されております。みなさん奮って参加ください。
 
 - 2024年12月 アイディアソン開催 [詳細はこちら(GitHub)](https://github.com/snakajima/life-is-beautiful?tab=readme-ov-file#アイデアソン締め切り2024年12月31日)
-- 2025年3月頃　ハッカソンを開催予定 [詳細はこちら(GitHub)](https://github.com/snakajima/life-is-beautiful?tab=readme-ov-file#ハッカソン締め切り2025年3月中旬)
+- 2025年3月頃 コントリビューション・フェスを開催予定 [詳細はこちら(GitHub)](https://github.com/snakajima/life-is-beautiful?tab=readme-ov-file#ハッカソンコントリビューションフェス締め切り2025年3月中旬)
   - お題
-    - 1. AI-native 音声版 Instagram（プロダクト開発）
-    - 2. GraphAIのWebインターフェイス（オープンソース・プロジェクト）
-    - 3. GraphAIアプリを自動生成するGraphAIアプリ（研究）
+    - 1. GraphAI（オープンソース・プロジェクト）
+    - 2. AI-native 音声版 Instagram（プロダクト開発）
+    - 3. GraphAIのWebインターフェイス（オープンソース・プロジェクト）
     - 4. AI-native辞書（プロダクト開発）
-
+    - 5. GraphAIアプリを自動生成するGraphAIアプリ（研究）
+  
 ## 2.3. パネルディスカッション: 中島聡氏 x 小飼弾氏
 中島氏、小飼氏によるパネルディスカッションを行いました。  
 [YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?feature=shared&t=15060)
 
 :::message
 **小飼弾氏 プロフィール**  
-株式会社オン・ザ・エッヂ(後のライブドア)の取締役最高技術責任者(CTO)を務め、同社の上場に貢献。著書に『小飼弾の「仕組み」進化論』(日本実業出版社)、『「中卒」でもわかる科学入門』『子供の科学完全読本 1924-1945』(誠文堂新光社)など。ニコニコチャンネル「小飼弾の論弾」で、毎月2回、時事ニュース解説や科学・IT解説などをライブ配信中
+株式会社オン・ザ・エッヂ(後のライブドア)の取締役最高技術責任者(CTO)を務め、同社の上場に貢献。著書に『小飼弾の「仕組み」進化論』(日本実業出版社)、『「中卒」でもわかる科学入門』『子供の科学完全読本 1924-1945』(誠文堂新光社)など。ニコニコチャンネル「小飼弾の論弾」で、毎月2回、時事ニュース解説や科学・IT解説などをライブ配信中。  
+
+公式ブログ: [404 Blog Not Found](https://dankogai.livedoor.blog)  
+近著紹介: [『子供の科学完全読本 1924-1945: 大正から昭和へ 100年前から読み直して学ぶ 教養としての科学史』](https://www.amazon.co.jp/dp/4416723369)(誠文堂新光社、2024年9月) 
 :::
 
 ### テーマ1: 今、AI分野で起業や事業を立ち上げるならどんな事業ドメインでどんなサービスを作るか
@@ -100,35 +114,35 @@ AIへの危機感については、AIの誤作動への対応や、人間の判�
 
 ## 2.4. 登壇者様の発表（別記事にてご紹介予定）
 - 有本勇氏
-  - GraphAI: Full-Stack TypeScript Tool for AI Applications
-- 上野彰大氏
-  - LLMマルチエージェントアプリケーションの設計のコツ
-- 宮田大督氏
-  - マルチエージェントとドメインスペシャリストが切り開く次世代サービス開発：旅行事業領域での実践と未来
-- 山室友樹氏
-  - LLMとPlaywrightで実現する非定型なデータの収集
-- 草間一人氏
-  - AI x インシデント管理で拡げるサービスオーナーシップ
-- 矢野通寿氏
-  - GraphAI x Raycastで自然言語で様々なワークフローの実行できるようにする試み
-- しょっさん氏
-  - Raycast Proで、あらゆるコンテンツをすばやく解読する
-- r.kagaya氏
-  - デザインパターンで理解するLLMエージェントの設計
-- 大嶋 勇樹氏
-  - LangChain/LangGraphの進化からみるLLMベースのAIエージェントの開発
+  - GraphAI: Full-Stack TypeScript Tool for AI Applications ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=p6kbsl-N9VQgb_im&t=2495))
+- 上野彰大氏 ([X Link](https://x.com/ueeeeniki))
+  - LLMマルチエージェントアプリケーションの設計のコツ ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=petQpxa9Jv8t44J_&t=3968))
+- 宮田大督氏 ([X Link](https://x.com/miyatti))
+  - マルチエージェントとドメインスペシャリストが切り開く次世代サービス開発：旅行事業領域での実践と未来 ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=yw5qbPAb3Cw0OUrG&t=5944))
+- 山室友樹氏 ([X Link](https://x.com/__y_ymmr__))
+  - LLMとPlaywrightで実現する非定型なデータの収集 ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=7pwmLScSAGDotjiQ&t=6961))
+- 草間一人氏  ([X Link](https://x.com/jacopen))
+  - AI x インシデント管理で拡げるサービスオーナーシップ ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=mB0baCU17859UCWb&t=8777))
+- 矢野通寿氏 ([X Link](https://x.com/nagauta_jp))
+  - GraphAI x Raycastで自然言語で様々なワークフローの実行できるようにする試み ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=n2jQc5I9bp73d0Hi&t=9844))
+- しょっさん氏 ([X Link](https://x.com/sho7650))
+  - Raycast Proで、あらゆるコンテンツをすばやく解読する ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=FOU8SEgVRWL6JO-r&t=11111))
+- r.kagaya氏 ([X Link](https://x.com/ry0_kaga))
+  - デザインパターンで理解するLLMエージェントの設計 ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=RdxnvAj9s5m6DkSR&t=12448))
+- 大嶋 勇樹氏 ([X Link](https://x.com/oshima_123))
+  - LangChain/LangGraphの進化からみるLLMベースのAIエージェントの開発 ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=1vkAoQ5PPQv3uOQy&t=13626))
 
 # 3. 謝辞
 本イベントは、多くの企業様のご支援により実現することができました。
 
 - 会場スポンサー：
-  - ファインディ株式会社様
+  - ファインディ株式会社様 ([ホームページ](https://findy.co.jp))
 - 企業スポンサー：
-  - BASE株式会社様
-  - 株式会社スタジオユリグラフ様
-  - 株式会社Macbee Planet様
-  - 株式会社ドール様
-  - 株式会社技術評論社様
+  - BASE株式会社様 ([BASE BANKチーム紹介資料](https://speakerdeck.com/base/basebank?slide=52))
+  - 株式会社スタジオユリグラフ様 ([ホームページ](https://studioeurygraph.com))
+  - 株式会社Macbee Planet様 ([株式会社Macbee Planet 採用情報](https://hrmos.co/pages/macbeeplanet/jobs))
+  - 株式会社ドール様 ([オフィス向け定期配達サービス 「Office de Dole もったいないバナナ」](https://www.dole.co.jp/news/241004))
+  - 株式会社技術評論社様 ([ホームページ](https://gihyo.jp))
 
 ![](/images/20241123-raycast/20241123-sponsors.png)
 
