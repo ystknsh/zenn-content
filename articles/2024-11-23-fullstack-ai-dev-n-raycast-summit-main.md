@@ -4,7 +4,8 @@ emoji: "🚀"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ai, llm, raycast, graphai]
 publication_name: raycast_jp
-published: false
+published: true
+published_at: 2024-12-02 11:45
 ---
 
 2024年11月23日(土)、東京・大崎にあるファインディ株式会社様のイベントスペースにて「Fullstack AI Dev & Raycast Summit feat. Satoshi Nakajima」を開催いたしました。
