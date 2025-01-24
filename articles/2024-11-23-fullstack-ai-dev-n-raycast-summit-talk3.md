@@ -34,7 +34,7 @@ GitHub: https://github.com/jacopen
 
 **AIによる支援機能**
 
-現代のインシデント管理ツールは、以下のような機能でエンジニアを支援しています：
+ PagerDutyは、以下のような機能でエンジニアを支援しています：
 
 - アラートのインテリジェントなフィルタリング
 - 状況に応じた通知方法の最適化（Slack、電話、プッシュ通知など）
@@ -180,7 +180,7 @@ https://docs.google.com/presentation/d/1QgC38fHaknXQ3Fi3107HxWVg-utg_vDVxktjZXlV
 2020年3月に創業5年でマザーズに上場、また2024年7月にプライム市場へ上場し、売上高は390億円（2024年4月期実績）を超えました。
 現在は第2創業期を迎えており、更なる成長を実現するために体制の強化を図っています。
 [採用情報](https://hrmos.co/pages/macbeeplanet/jobs)
-[株式会社AIVIA採用情報](https://hrmos.co/pages/macbeeplanet/jobs/2053049830136725504)
+[株式会社AIVIA採用情報](https://hrmos.co/pages/macbeeplanet/jobs/00027)
 :::
 
 ## 4.1. 登壇概要  (Claude による要約をベースに編集)
