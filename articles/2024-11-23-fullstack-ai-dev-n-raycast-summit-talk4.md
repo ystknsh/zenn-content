@@ -205,7 +205,7 @@ API
 現在、CTOポジションを募集しています。
 自由な社風と柔軟な働き方。成長中のベンチャー企業ながら、競争力のある待遇を提供。
 
-![](/images/20241123-raycast/20241123-studioeurygraph.png)
+![](/images/20241123-raycast/20241123-studioeurygraph3.png)
 
 ## 3.2. YouTube Link
 
