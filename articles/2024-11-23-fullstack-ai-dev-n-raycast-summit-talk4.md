@@ -4,8 +4,8 @@ emoji: "🚀"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ai, llm, raycast, graphai]
 publication_name: raycast_jp
-published: false
-# published_at: 2024-12-02 11:45
+published: true
+published_at: 2025-02-12 
 ---
 
 2024年11月23日(土)、東京・大崎にあるファインディ株式会社様のイベントスペースにて「Fullstack AI Dev & Raycast Summit feat. Satoshi Nakajima」を開催いたしました。本記事ではトークセッション4 および スポンサートークについて紹介いたします。
@@ -194,7 +194,7 @@ API
 
 **思い出書店**
 
-"思い出"がつづられた本を交換する本屋。「交換でつながる」新しい形の古書サービス（2023年グッドデザイン賞受賞）
+"思い出"がつづられた本を交換する本屋。「交換でつながる」新しい形の古書サービス（2024年グッドデザイン賞受賞）
 
 **その他の事業**
 
