@@ -10,7 +10,12 @@ published: true
 
 2024年11月23日(土)、東京・大崎にあるファインディ株式会社様のイベントスペースにて「Fullstack AI Dev & Raycast Summit feat. Satoshi Nakajima」を開催いたしました。本記事ではトークセッション1 および スポンサートークについて紹介いたします。
 
-イベントレポートのメイン記事は[こちら](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-main)です。
+イベントレポートはメイン記事 1本、トークセッション 4本 の合計5本です。  
+各レポートは以下の表からご覧ください。
+
+|メイン|セッション1|セッション2|セッション3|セッション4|
+|:---:|:---:|:---:|:---:|:---:|
+|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-main)|本記事|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk2)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk3)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk4)|
 
 # 1. 有本勇氏 / GraphAI: Full-Stack TypeScript Tool for AI Applications
 :::message
@@ -183,4 +188,11 @@ https://www.youtube.com/live/sPTnyuO9OCA?feature=shared&t=5289
 ## 3.3. 登壇資料
 @[docswell](https://www.docswell.com/s/gatchan0807/ZN1V6G-2024-11-23-110000)
 
+----
+# イベントレポートリンク
+イベントレポートはメイン記事 1本、トークセッション 4本 の合計5本です。  
+各レポートは以下の表からご覧ください。
 
+|メイン|セッション1|セッション2|セッション3|セッション4|
+|:---:|:---:|:---:|:---:|:---:|
+|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-main)|本記事|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk2)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk3)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk4)|

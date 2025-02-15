@@ -11,7 +11,12 @@ published_at: 2025-02-12
 2024年11月23日(土)、東京・大崎にあるファインディ株式会社様のイベントスペースにて「Fullstack AI Dev & Raycast Summit feat. Satoshi Nakajima」を開催いたしました。本記事ではトークセッション4 および スポンサートークについて紹介いたします。
 ※ トークセッション4の後のパネルディスカッション 中島聡氏 x 小飼弾氏 はメイン記事に掲載しております。
 
-イベントレポートのメイン記事は[こちら](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-main)です。
+イベントレポートはメイン記事 1本、トークセッション 4本 の合計5本です。  
+各レポートは以下の表からご覧ください。
+
+|メイン|セッション1|セッション2|セッション3|セッション4|
+|:---:|:---:|:---:|:---:|:---:|
+|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-main)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk1)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk2)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk3)|本記事|
 
 # 1. r.kagaya氏 / デザインパターンで理解するLLMエージェントの設計
 :::message
@@ -210,3 +215,12 @@ API
 ## 3.2. YouTube Link
 
 https://www.youtube.com/live/sPTnyuO9OCA?feature=shared&t=19043
+
+----
+# イベントレポートリンク
+イベントレポートはメイン記事 1本、トークセッション 4本 の合計5本です。  
+各レポートは以下の表からご覧ください。
+
+|メイン|セッション1|セッション2|セッション3|セッション4|
+|:---:|:---:|:---:|:---:|:---:|
+|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-main)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk1)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk2)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk3)|本記事|

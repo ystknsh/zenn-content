@@ -10,7 +10,12 @@ published_at: 2025-01-31 05:00
 
 2024年11月23日(土)、東京・大崎にあるファインディ株式会社様のイベントスペースにて「Fullstack AI Dev & Raycast Summit feat. Satoshi Nakajima」を開催いたしました。本記事ではトークセッション3 および スポンサートークについて紹介いたします。
 
-イベントレポートのメイン記事は[こちら](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-main)です。
+イベントレポートはメイン記事 1本、トークセッション 4本 の合計5本です。  
+各レポートは以下の表からご覧ください。
+
+|メイン|セッション1|セッション2|セッション3|セッション4|
+|:---:|:---:|:---:|:---:|:---:|
+|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-main)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk1)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk2)|本記事|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk4)|
 
 # 1. 草間一人氏 / AI x インシデント管理で拡げるサービスオーナーシップ
 :::message
@@ -230,3 +235,12 @@ Macbee Planet は2015年設立のB2B広告コンサルティング企業です�
 ## 4.2. YouTube Link
 
 https://www.youtube.com/live/sPTnyuO9OCA?feature=shared&t=11914
+
+----
+# イベントレポートリンク
+イベントレポートはメイン記事 1本、トークセッション 4本 の合計5本です。  
+各レポートは以下の表からご覧ください。
+
+|メイン|セッション1|セッション2|セッション3|セッション4|
+|:---:|:---:|:---:|:---:|:---:|
+|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-main)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk1)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk2)|本記事|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk4)|

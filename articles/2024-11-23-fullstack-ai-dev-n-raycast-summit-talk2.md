@@ -10,7 +10,12 @@ published_at: 2025-01-30 05:00
 
 2024年11月23日(土)、東京・大崎にあるファインディ株式会社様のイベントスペースにて「Fullstack AI Dev & Raycast Summit feat. Satoshi Nakajima」を開催いたしました。本記事ではトークセッション2 および スポンサートークについて紹介いたします。
 
-イベントレポートのメイン記事は[こちら](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-main)です。
+イベントレポートはメイン記事 1本、トークセッション 4本 の合計5本です。  
+各レポートは以下の表からご覧ください。
+
+|メイン|セッション1|セッション2|セッション3|セッション4|
+|:---:|:---:|:---:|:---:|:---:|
+|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-main)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk1)|本記事|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk3)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk4)|
 
 # 1. 宮田大督氏 / AI旅行記事生成PJから学んだマルチエージェントの本質と可能性 ~旅行スタートアップの生成AI開発ナレッジシェア~
 :::message
@@ -159,3 +164,12 @@ Doleは「フルーツでスマイルを。」をというブランドメッセ�
 ## 3.2. YouTube Link
 
 https://www.youtube.com/live/sPTnyuO9OCA?feature=shared&t=8050
+
+----
+# イベントレポートリンク
+イベントレポートはメイン記事 1本、トークセッション 4本 の合計5本です。  
+各レポートは以下の表からご覧ください。
+
+|メイン|セッション1|セッション2|セッション3|セッション4|
+|:---:|:---:|:---:|:---:|:---:|
+|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-main)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk1)|本記事|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk3)|[Zenn Link](https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk4)|

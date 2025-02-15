@@ -113,25 +113,32 @@ AIへの危機感については、AIの誤作動への対応や、人間の判�
 プログラミング学習に関しては、AI活用以前の基礎的な理解の重要性が指摘され、「裸の状態」を知ることの必要性が強調されました。
 
 
-## 2.4. 登壇者様の発表（別記事にてご紹介予定）
-- 有本勇氏
-  - GraphAI: Full-Stack TypeScript Tool for AI Applications ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=p6kbsl-N9VQgb_im&t=2495))
-- 上野彰大氏 ([X Link](https://x.com/ueeeeniki))
-  - LLMマルチエージェントアプリケーションの設計のコツ ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=petQpxa9Jv8t44J_&t=3968))
-- 宮田大督氏 ([X Link](https://x.com/miyatti))
-  - マルチエージェントとドメインスペシャリストが切り開く次世代サービス開発：旅行事業領域での実践と未来 ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=yw5qbPAb3Cw0OUrG&t=5944))
-- 山室友樹氏 ([X Link](https://x.com/__y_ymmr__))
-  - LLMとPlaywrightで実現する非定型なデータの収集 ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=7pwmLScSAGDotjiQ&t=6961))
-- 草間一人氏  ([X Link](https://x.com/jacopen))
-  - AI x インシデント管理で拡げるサービスオーナーシップ ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=mB0baCU17859UCWb&t=8777))
-- 矢野通寿氏 ([X Link](https://x.com/nagauta_jp))
-  - GraphAI x Raycastで自然言語で様々なワークフローの実行できるようにする試み ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=n2jQc5I9bp73d0Hi&t=9844))
-- しょっさん氏 ([X Link](https://x.com/sho7650))
-  - Raycast Proで、あらゆるコンテンツをすばやく解読する ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=FOU8SEgVRWL6JO-r&t=11111))
-- r.kagaya氏 ([X Link](https://x.com/ry0_kaga))
-  - デザインパターンで理解するLLMエージェントの設計 ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=RdxnvAj9s5m6DkSR&t=12448))
-- 大嶋 勇樹氏 ([X Link](https://x.com/oshima_123))
-  - LangChain/LangGraphの進化からみるLLMベースのAIエージェントの開発 ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=1vkAoQ5PPQv3uOQy&t=13626))
+## 2.4. 登壇者様の発表
+- イベントレポート トークセッション1
+  - 有本勇氏
+    - GraphAI: Full-Stack TypeScript Tool for AI Applications ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=p6kbsl-N9VQgb_im&t=2495))
+  - 上野彰大氏 ([X Link](https://x.com/ueeeeniki))
+    - LLMマルチエージェントアプリケーションの設計のコツ ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=petQpxa9Jv8t44J_&t=3968))
+
+- イベントレポート トークセッション2
+  - 宮田大督氏 ([X Link](https://x.com/miyatti))
+    - AI旅行記事生成PJから学んだマルチエージェントの本質と可能性 ~旅行スタートアップの生成AI開発ナレッジシェア~ ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=yw5qbPAb3Cw0OUrG&t=5944))
+  - 山室友樹氏 ([X Link](https://x.com/__y_ymmr__))
+    - LLMとPlaywrightで実現する非定型なデータの収集 ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=7pwmLScSAGDotjiQ&t=6961))
+- イベントレポート トークセッション3
+  - 草間一人氏  ([X Link](https://x.com/jacopen))
+    - AI x インシデント管理で拡げるサービスオーナーシップ ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=mB0baCU17859UCWb&t=8777))
+
+  - 矢野通寿氏 ([X Link](https://x.com/nagauta_jp))
+    - GraphAI x Raycastで自然言語で様々なワークフローの実行できるようにする試み ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=n2jQc5I9bp73d0Hi&t=9844))
+  - しょっさん氏 ([X Link](https://x.com/sho7650))
+    - Raycast Proで、あらゆるコンテンツをすばやく解読する ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=FOU8SEgVRWL6JO-r&t=11111))
+
+- イベントレポート トークセッション4
+  - r.kagaya氏 ([X Link](https://x.com/ry0_kaga))
+    - デザインパターンで理解するLLMエージェントの設計 ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=RdxnvAj9s5m6DkSR&t=12448))
+  - 大嶋 勇樹氏 ([X Link](https://x.com/oshima_123))
+    - LangChain/LangGraphの進化からみるLLMベースのAIエージェントの開発 ([YouTube Link](https://www.youtube.com/live/sPTnyuO9OCA?si=1vkAoQ5PPQv3uOQy&t=13626))
 
 # 3. 謝辞
 本イベントは、多くの企業様のご支援により実現することができました。
