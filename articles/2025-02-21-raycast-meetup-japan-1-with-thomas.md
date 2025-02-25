@@ -120,7 +120,7 @@ https://tech.macbee-planet.com/#block-66dced4190c9409f93460bf11ce465c1
 ​株式会社スタディスト ソフトウェアエンジニア
 
 ​株式会社スタディストでTeachme Bizの開発を担当しています。2023年4月にラクスル株式会社に新卒で入社し、その後2024年10月に株式会社スタディストへ転職しました。趣味は音楽制作です。
-X: [https://x.com/_smasato_](https://x.com/_smasato_)
+X: [https://x.com/\_smasato\_](https://x.com/_smasato_)
 YouTube: https://www.youtube.com/@smasato
 :::
 
