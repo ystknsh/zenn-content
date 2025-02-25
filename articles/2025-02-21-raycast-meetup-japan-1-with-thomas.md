@@ -72,7 +72,7 @@ X: https://x.com/yuki_kobiyama
 X: https://x.com/masuipeo
 :::
 
-**登壇資料のnote記事**
+**登壇内容に関するnote記事**
 https://note.com/masuipeo/n/n9421e2b61064?sub_rt=share_pb
 
 ## Kawamata Ryo 氏 / Raycast AI APIを使ってちょっと便利なAIコマンドを作ってみた
@@ -120,7 +120,7 @@ https://tech.macbee-planet.com/#block-66dced4190c9409f93460bf11ce465c1
 ​株式会社スタディスト ソフトウェアエンジニア
 
 ​株式会社スタディストでTeachme Bizの開発を担当しています。2023年4月にラクスル株式会社に新卒で入社し、その後2024年10月に株式会社スタディストへ転職しました。趣味は音楽制作です。
-X: https://x.com/_smasato_
+X: [https://x.com/_smasato_](https://x.com/_smasato_)
 YouTube: https://www.youtube.com/@smasato
 :::
 
