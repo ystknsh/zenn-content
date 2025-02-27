@@ -1,5 +1,5 @@
 ---
-title: "登壇資料リンク - Raycast Meetup Japan #1 with Thomas Paul Mann 2025-02-21"
+title: "登壇資料リンク - Raycast Meetup Japan #1 with Thomas & Pedro 2025-02-21"
 emoji: "🚀"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [raycast]
@@ -7,8 +7,13 @@ publication_name: raycast_jp
 published: true
 ---
 
-Raycast日本コミュニティは2025/02/21(金)にRaycast Meetup Japan #1を開催しました。
+Raycast日本コミュニティは2025/02/21(金)にRaycast Meetup Japan #1を開催しました。  
 本記事では登壇者、登壇資料等の各種リンクを紹介いたします。
+
+- ライブセッション: Raycast社のCEO ThomasとHypeチームをリードするPedro
+- LT: 7名
+- 会場スポンサー: 株式会社BuySell Technologies 様
+- ケータリングスポンサー: 株式会社Macbee Planet 様
 
 ## 株式会社BuySell Technologies 様 / スポンサートーク
 :::message
