@@ -7,13 +7,19 @@ publication_name: raycast_jp
 published: true
 ---
 
-Raycast日本コミュニティは2025/02/21(金)にRaycast Meetup Japan #1を開催しました。  
-本記事では登壇者、登壇資料等の各種リンクを紹介いたします。
+Raycast日本コミュニティは、2025年2月21日（金）に **Raycast Meetup Japan #1** を開催しました。  
+本記事では、イベントの登壇者やセッション内容、各種資料へのリンクをまとめています。
 
-- ライブセッション: Raycast社のCEO ThomasとHypeチームをリードするPedro
-- LT: 7名
-- 会場スポンサー: 株式会社BuySell Technologies 様
-- ケータリングスポンサー: 株式会社Macbee Planet 様
+当日は、Raycast社のCEO **Thomas** 氏と、Hypeチームを率いる **Pedro** 氏によるライブセッションに加え、7名の登壇者によるLT（ライトニングトーク）も行われました。
+
+## イベント概要
+- **ライブセッション**: Raycast社 CEO **Thomas**、Hypeチームリーダー **Pedro**
+- **LT登壇者**: 7名
+- **会場スポンサー**: 株式会社BuySell Technologies 様
+- **ケータリングスポンサー**: 株式会社Macbee Planet 様
+- **参加者**: 計114名（うち36名が現地参加）
+
+
 
 ## 株式会社BuySell Technologies 様 / スポンサートーク
 :::message
