@@ -4,16 +4,11 @@ emoji: "🚀"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [raycast]
 publication_name: raycast_jp
-published: false
-# published_at: 2025-02-12 
+published: true
 ---
 
 Raycast日本コミュニティは2025/02/21(金)にRaycast Meetup Japan #1を開催しました。
 本記事では登壇者、登壇資料等の各種リンクを紹介いたします。
-
-当日のイベントレポートに関してはこちらの記事をご覧ください。
-
-https://zenn.dev/raycast_jp/articles/raycast-meetup-1
 
 ## 株式会社BuySell Technologies 様 / スポンサートーク
 :::message
@@ -31,8 +26,12 @@ https://voix.jp/sdgs/sdgs/55675/
 **技術広報 吉森健成様**
 X: https://x.com/molmolken
 
-## Raycast CEO ​Thomas Paul Mann / ライブセッション
+## Raycast Thomas & Pedro / ライブセッション
+**YouTube Link**
 https://www.youtube.com/live/sHSWo-aaLls?feature=shared&t=1382
+
+**Thomas & Pedro ライブセッションレポート**
+https://zenn.dev/raycast_jp/articles/raycast-meetup-1
 
 ## せーじ 氏​ / Raycastを育てよう!
 :::message
@@ -45,8 +44,7 @@ GitHub: https://github.com/n-seiji
 X: https://x.com/se_eiji
 :::
 
-**登壇資料**
-Raycastを育てよう!
+**登壇資料 Raycastを育てよう!**
 https://n-seiji.github.io/slides/raycast-meet-up-1/
 
 ## Yuki Kobiyama 氏 / Script commandsでObsidian上のタスク管理をハッピーに
