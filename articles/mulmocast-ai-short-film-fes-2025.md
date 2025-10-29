@@ -3,7 +3,7 @@ title: "台本から動画を生成する MulmoCast アプリをリリース｜A
 emoji: "📽️"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [llm, mulmocast, ai, 生成AI]
-published: false
+published: true
 publication_name: singularity
 ---
 
