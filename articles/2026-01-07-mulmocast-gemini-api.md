@@ -3,7 +3,7 @@ title: "Gemini API キー取得 & 課金設定ガイド"
 emoji: "🔑"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [llm, mulmocast, gemini, ai, 生成AI]
-published: false
+published: true
 publication_name: singularity
 ---
 
