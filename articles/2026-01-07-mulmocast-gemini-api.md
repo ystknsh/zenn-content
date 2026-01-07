@@ -25,7 +25,7 @@ Google AI StudioでGemini APIキーを取得し、有料プランの課金設定
 
 ![Beat 2](/images/mulmocast_gemini_api/gemini_api_00_08.png)
 
-まず、APIキーの新規作成から始めます。Google AI Studioを開き、左側メニューから「Get API key」をクリックします。
+まず、APIキーの新規作成から始めます。[Google AI Studio](https://aistudio.google.com)を開き、左側メニューから「Get API key」をクリックします。
 
 ![Beat 3](/images/mulmocast_gemini_api/gemini_api_00_17.png)
 
