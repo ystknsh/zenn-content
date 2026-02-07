@@ -60,11 +60,27 @@ my-plugin/
 
 Plugin は MCP サーバーや Hooks（シェルコマンド実行）を含められるため、**信頼できないソースの Plugin はインストールしないこと**。チームで Plugin を自作する場合は内容を把握できるので安全だが、外部の Plugin を導入する際は中身を確認してからインストールすべき。
 
-## Step 1: Plugin を作る
+## Step 1: GitHub リポジトリに Plugin を作る
+
+例として、チーム共通のレビュー Skill・Agent・Hooks を持つ Plugin を作る。
+
+```bash
+# GitHub にリポジトリを作成（例: my-org/my-team-plugin）
+gh repo create my-org/my-team-plugin --private
+git clone git@github.com:my-org/my-team-plugin.git
+cd my-team-plugin
+```
+
+### ディレクトリ構造を作る
+
+```bash
+mkdir -p .claude-plugin skills/review-pr agents hooks
+```
 
 ### plugin.json（必須）
 
 ```json
+// .claude-plugin/plugin.json
 {
   "name": "my-team-plugin",
   "description": "チーム共通の Skill・Agent・Hooks",
@@ -135,9 +151,18 @@ maxTurns: 15
 }
 ```
 
+### push する
+
+```bash
+git add -A && git commit -m "Initial plugin setup"
+git push origin main
+```
+
+これで `my-org/my-team-plugin` リポジトリに Plugin が完成。
+
 ## Step 2: ローカルでテストする
 
-`--plugin-dir` フラグで Plugin をローカルから直接読み込める。
+push 前にローカルでテストしたい場合は、`--plugin-dir` フラグで直接読み込める。
 
 ```bash
 claude --plugin-dir ./my-team-plugin
