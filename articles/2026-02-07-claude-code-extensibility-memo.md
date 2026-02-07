@@ -4,6 +4,7 @@ emoji: "🔧"
 type: "idea"
 topics: ["claudecode", "claude", "ai", "開発環境"]
 published: true
+publication_name: singularity
 ---
 
 :::message
