@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(articles/**)",
+      "Write(articles/**)",
+      "Edit(articles/**)",
+      "Glob(articles/**)",
+      "Grep(articles/**)",
+      "WebFetch"
+    ]
+  }
+}
