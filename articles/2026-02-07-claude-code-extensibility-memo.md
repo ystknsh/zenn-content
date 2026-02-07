@@ -365,6 +365,8 @@ my-plugin/
 - **個人用 Plugin repo** も作れば、マシン間の同期も楽
 - Slash Commands は Plugin に含められないので、**最初から Skill で作っておく**
 
+具体的な作成・配布手順は別記事にまとめました。 [Claude Code Plugin の作り方と配布方法](https://zenn.dev/singularity/articles/2026-02-08-claude-code-plugin-distribution)
+
 ## Skill 作成の運用ルール
 
 実際に運用してみてわかったこと：
