@@ -11,6 +11,10 @@ publication_name: singularity
 筆者の実体験をもとに Claude Code を活用して整理しました。公式ドキュメントと挙動が異なる場合は公式を優先してください。
 :::
 
+:::message alert
+**2026-02-11 更新:** [@karaage0703 さんに教えていただき](https://x.com/karaage0703/status/2020814844950392893)、Claude Code v2.1.3 で Slash Commands が Skills に統合された件を反映しました。YAML frontmatter のフィールド一覧も公式ドキュメント準拠に更新しています。
+:::
+
 Claude Code の拡張機能（Slash Commands, Skills, Agents, Plugins）の違いがわかりにくかったので、実際に触りながら整理したメモです。
 
 ## 拡張機能の全体像
@@ -34,16 +38,32 @@ Agent Teams（実験的機能）
 
 ## Slash Commands vs Skills
 
-| | Slash Commands | Skills |
+:::message
+**v2.1.3 で Slash Commands は Skills に統合された。** `.claude/commands/` に置いたファイルも `.claude/skills/` に置いたファイルも、同じシステムで処理される。既存の `.claude/commands/` ファイルはそのまま動作する。
+
+> Custom slash commands have been merged into skills. A file at `.claude/commands/review.md` and a skill at `.claude/skills/review/SKILL.md` both create `/review` and work the same way. Your existing `.claude/commands/` files keep working. Skills add optional features: a directory for supporting files, frontmatter to control whether you or Claude invokes them, and the ability for Claude to load them automatically when relevant.
+> — [Extend Claude with skills - Claude Code Docs](https://code.claude.com/docs/en/skills)
+:::
+
+統合後も置き場所による違いは残っている：
+
+| | `.claude/commands/` | `.claude/skills/` |
 |---|---|---|
-| 場所 | `.claude/commands/name.md` | `.claude/skills/name/SKILL.md` |
 | `/name` で手動呼び出し | ✅ | ✅ |
-| Claude が自動判断で発動 | ❌ | ✅（`disable-model-invocation: true` で無効化可） |
+| Claude が自動判断で発動 | ✅（frontmatter に `description` があれば。`disable-model-invocation: true` で無効化可） | ✅（同左） |
 | サポートファイル | なし（単一ファイル） | 同ディレクトリにリファレンス資料等を置ける |
-| YAML frontmatter | サポート | サポート |
+| YAML frontmatter | サポート（統合後、Skills と同じフィールドが使える） | サポート |
 | Plugin に含められるか | ❌ | ✅ |
 
-**結論: Skill を使うべき。** Slash Commands でできることは Skill ですべてできる上に、Plugin 化を見据えるなら最初から Skill で作っておくのが正解。
+**結論: Skills を使うべき。** 内部的には同じシステムだが、サポートファイルや Plugin 化は Skills でのみ対応しており、公式も Skills を推奨している。
+
+自動発動の制御に関わる frontmatter の組み合わせ（[公式ドキュメント](https://code.claude.com/docs/en/skills#control-who-invokes-a-skill)より）：
+
+| 設定 | ユーザーが呼出 | Claude が呼出 | コンテキストへの読み込み |
+|---|---|---|---|
+| デフォルト | ✅ | ✅ | `description` が常にコンテキストに入り、呼出時に全文読み込み |
+| `disable-model-invocation: true` | ✅ | ❌ | `description` がコンテキストに入らない。ユーザー呼出時に全文読み込み |
+| `user-invocable: false` | ❌ | ✅ | `description` が常にコンテキストに入り、呼出時に全文読み込み |
 
 :::message
 以前は Skill はユーザーが明示的に呼び出せず自動発動のみだったが、現在は `/name` で手動呼び出しも可能になっている。
@@ -51,29 +71,37 @@ Agent Teams（実験的機能）
 
 ## YAML frontmatter
 
-Skill（SKILL.md）に設定できる主なフィールド：
+Skill（SKILL.md）に設定できるフィールド（[公式リファレンス](https://code.claude.com/docs/en/skills)）：
 
 ```yaml
 ---
 name: translate-insights
 description: レポートを日本語に翻訳しファイルに保存する
+argument-hint: "[target-file]"
 allowed-tools: Read, Write, Bash
 model: sonnet
 context: fork
-maxTurns: 10
+agent: general-purpose
 disable-model-invocation: true
 ---
 ```
 
 | フィールド | 説明 |
 |---|---|
-| `description` | 何をするか。Claude の自動トリガー判断にも使われる |
+| `name` | スラッシュコマンド名。省略時はディレクトリ名。小文字・数字・ハイフンのみ（最大64文字） |
+| `description` | 何をするか。Claude の自動トリガー判断にも使われる（**推奨**） |
+| `argument-hint` | オートコンプリート時のヒント（例: `[issue-number]`） |
 | `allowed-tools` | この Skill 内で許可するツール |
 | `model` | 使用モデル: `sonnet`, `opus`, `haiku` |
 | `context` | `fork` で Sub-agent（別コンテキスト）実行 |
-| `maxTurns` | 最大ターン数。`context: fork` 時の暴走防止に必須 |
+| `agent` | `context: fork` 時のサブエージェント種別（`Explore`, `Plan`, `general-purpose` 等） |
 | `disable-model-invocation` | `true` で自動発動を無効化（手動 `/name` のみ） |
+| `user-invocable` | `false` で `/` メニューから非表示。背景知識専用 Skill 向け |
 | `hooks` | Skill がアクティブな間だけ有効な Hooks を定義（詳細は Hooks セクション参照） |
+
+:::message
+`maxTurns` は Skill では使えない。`.claude/agents/` の Agent 定義専用のフィールド（[Sub-agents ドキュメント](https://code.claude.com/docs/en/sub-agents)参照）。
+:::
 
 ## Sub-agent とコンテキスト
 
@@ -175,7 +203,6 @@ allowed-tools: Read, Grep, Glob, Bash, Write
 context: fork
 agent: code-reviewer
 model: sonnet
-maxTurns: 15
 disable-model-invocation: true
 ---
 現在のブランチの差分をレビューしてください。
@@ -363,7 +390,7 @@ my-plugin/
 - **組織用 Plugin repo** を作り、各リポジトリでインストール
   - 共通の PR レビュー Skill、lint hook、共通 Agent 等
 - **個人用 Plugin repo** も作れば、マシン間の同期も楽
-- Slash Commands は Plugin に含められないので、**最初から Skill で作っておく**
+- Slash Commands は Skills に統合されたが、Plugin に含められるのは `.claude/skills/` のみなので、**最初から Skills で作っておく**
 
 具体的な作成・配布手順は別記事にまとめました。 [Claude Code Plugin の作り方と配布方法](https://zenn.dev/singularity/articles/2026-02-08-claude-code-plugin-distribution)
 
@@ -373,12 +400,12 @@ my-plugin/
 
 1. **最初はフォアグラウンド**で作る（`context: fork` なし）
 2. 動作確認・デバッグ
-3. **安定したら Sub-agent 化**（`context: fork` + `maxTurns` 追加）
+3. **安定したら Sub-agent 化**（`context: fork` 追加）
 4. Sub-agent には「**結果はファイルに書き出し、返答は最小限に**」と指示する
-5. `maxTurns` を必ず設定する
+5. Agent 定義（`.claude/agents/`）側で `maxTurns` を必ず設定する
 
 :::message
-`maxTurns` を設定しないと、Sub-agent がタスク完了後に不要な確認作業を続けて暴走することがあった。10ターン程度で十分なケースが多い。
+`maxTurns` は Skill ではなく Agent 定義（`.claude/agents/*.md`）のフィールド。設定しないと、Sub-agent がタスク完了後に不要な確認作業を続けて暴走することがあった。10〜15ターン程度で十分なケースが多い。
 :::
 
 ## Agent Teams（実験的機能）
