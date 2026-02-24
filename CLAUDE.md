@@ -370,6 +370,65 @@ https://zenn.dev/raycast_jp/articles/2024-08-22-raycast-japan-presentaion-materi
 
 ---
 
+## topics 一覧
+
+記事のフロントマターで使用する topics の表記揺れを防ぐための一覧です。新しい topic を追加する場合はここにも追記してください。
+
+### AI / LLM 関連
+| topic | 用途 |
+|-------|------|
+| `ai` | AI 全般 |
+| `llm` | LLM 全般 |
+| `生成AI` | 生成 AI 全般 |
+| `gemini` | Google Gemini |
+| `claude` | Claude 全般 |
+| `claudecode` | Claude Code |
+| `o1` | OpenAI o1 |
+| `grok` | Grok |
+| `graphai` | GraphAI |
+
+### プロダクト / ツール
+| topic | 用途 |
+|-------|------|
+| `mulmocast` | MulmoCast |
+| `raycast` | Raycast |
+| `agentskills` | Claude Code プラグイン / Agent Skills |
+| `plugin` | プラグイン開発 |
+
+### 開発 / インフラ
+| topic | 用途 |
+|-------|------|
+| `cli` | CLI ツール |
+| `development` | 開発全般 |
+| `開発環境` | 開発環境の構築・設定 |
+| `自動化` | ワークフロー自動化 |
+| `nodejs` | Node.js |
+| `npm` | npm |
+| `yarn` | yarn |
+| `homebrew` | Homebrew |
+| `gas` | Google Apps Script |
+| `gmail` | Gmail |
+| `macos` | macOS |
+
+### 音声 / メディア
+| topic | 用途 |
+|-------|------|
+| `tts` | テキスト読み上げ |
+| `elevenlabs` | ElevenLabs |
+| `azure` | Azure（TTS 等） |
+| `vertexai` | Vertex AI |
+| `動画生成` | 動画生成 |
+| `字幕` | 字幕 |
+| `アルゴリズム` | アルゴリズム |
+
+### その他
+| topic | 用途 |
+|-------|------|
+| `iphone` | iPhone |
+| `世界モデル` | 世界モデルベンチマーク |
+
+---
+
 ## 記事ファイルの命名規則
 
 - 記事ファイル名は `YYYY-MM-DD-記事スラッグ.md` の形式にする
