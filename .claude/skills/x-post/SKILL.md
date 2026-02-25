@@ -39,24 +39,7 @@ YAML frontmatter から以下を取得:
 
 `topics` から最大4個のハッシュタグを生成し、末尾に `#zenn` を固定で付ける（計最大5個）。
 
-| topic | ハッシュタグ |
-|-------|------------|
-| `ai` | `#AI` |
-| `llm` | `#LLM` |
-| `claudecode` | `#ClaudeCode` |
-| `claude` | `#Claude` |
-| `生成AI` | `#生成AI` |
-| `graphai` | `#GraphAI` |
-| `mulmocast` | `#MulmoCast` |
-| `raycast` | `#Raycast` |
-| `nodejs` | `#NodeJS` |
-| `npm` | `#npm` |
-| `gas` | `#GAS` |
-| `macos` | `#macOS` |
-| `tts` | `#TTS` |
-| `agentskills` | `#AgentSkills` |
-| `plugin` | `#Plugin` |
-| その他 | `#` + そのまま（先頭大文字化） |
+マッピングは `CLAUDE.md` の「topics 一覧」のハッシュタグ列を参照する。一覧にない topic は `#` + そのまま（先頭大文字化）。
 
 ### Step 5: リード文の生成
 
