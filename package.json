@@ -7,7 +7,12 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "x-post": "tsx scripts/x-post.ts",
+    "format": "prettier --write 'scripts/**/*.ts'",
+    "format:check": "prettier --check 'scripts/**/*.ts'",
+    "lint": "eslint scripts",
+    "lint:fix": "eslint scripts --fix"
   },
   "repository": {
     "type": "git",
@@ -22,5 +27,15 @@
   "homepage": "https://github.com/ystknsh/zenn-content#readme",
   "dependencies": {
     "zenn-cli": "^0.4.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.0.0",
+    "eslint": "^10.0.2",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.1",
+    "tsx": "^4.19.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.33.0"
   }
 }
