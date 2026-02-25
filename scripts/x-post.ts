@@ -11,7 +11,11 @@ function loadEnv(envPath: string): void {
     const eqIndex = trimmed.indexOf("=");
     if (eqIndex <= 0) continue;
     const key = trimmed.slice(0, eqIndex).trim();
-    const value = trimmed.slice(eqIndex + 1).trim();
+    let value = trimmed.slice(eqIndex + 1).trim();
+    // Strip surrounding quotes ("value" or 'value')
+    if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+      value = value.slice(1, -1);
+    }
     if (!process.env[key]) {
       process.env[key] = value;
     }
@@ -21,7 +25,7 @@ function loadEnv(envPath: string): void {
 function requireEnv(name: string): string {
   const value = process.env[name];
   if (!value) {
-    console.error(`Error: ${name} is not set in .claude/.env`);
+    console.error(`Error: ${name} is not set in .env`);
     process.exit(1);
   }
   return value;
@@ -133,8 +137,7 @@ function countWeightedLength(str: string): number {
 
 const weightedLength = countWeightedLength(text);
 if (weightedLength > 280) {
-  console.error(`Error: Tweet is ${weightedLength} weighted chars (max 280)`);
-  process.exit(1);
+  console.warn(`Warning: Tweet is ~${weightedLength} weighted chars (max 280). Attempting to post anyway.`);
 }
 
 postTweet(text);
