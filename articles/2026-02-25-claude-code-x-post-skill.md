@@ -1,5 +1,5 @@
 ---
-title: "Claude Code の Skill で Zenn 記事を X に自動投稿する仕組みを作った"
+title: "Claude Code の Skill で Zenn 記事を X に自動投稿する仕組みを作る"
 emoji: "🐦"
 type: "tech"
 topics: [claudecode, x, cli, development, 自動化]
