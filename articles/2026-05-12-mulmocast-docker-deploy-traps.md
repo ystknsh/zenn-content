@@ -96,8 +96,8 @@ services:
 
 ### ホスト側（EC2）
 
-- **swap を設定する**（t3.small/medium はデフォルトで swap なし）
-- **EBS は 30〜50GB 以上**を確保（chromium + 各種 lib でディスクをすぐ使う）
+- **swap を設定する**（swap = メモリ不足時にディスクを補助メモリとして使う OS の仕組み。t3.small/medium はデフォルトで swap なし）
+- **EBS（EC2 のディスクボリューム）は 30〜50GB 以上**を確保（chromium + 各種 lib でディスクをすぐ使う）
 - デプロイスクリプトに `docker system prune -f` を入れて古いイメージを削る
 
 ---
