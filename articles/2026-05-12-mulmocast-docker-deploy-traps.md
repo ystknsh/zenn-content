@@ -306,7 +306,7 @@ mulmo movie ... exited with code null: < audio > audio < image
 
 1. **`exited with code null`** — Node.js `child_process.spawn` の `timeout` オプションは、設定時間で **SIGTERM を送って子プロセスを終了**させます。SIGTERM で終了すると exit code は `null` になります。
 2. **ログが `{ movie __index__0` で途切れている** — Replicate の動画生成 API を呼び出した瞬間に止まっています。
-3. **「10 分前後で必ず」** — コード上の `TIMEOUT_MS = 600_000` と一致。
+3. **発生時刻が 10 分前後に集中している** — コード上の `TIMEOUT_MS = 600_000` と一致。
 
 **勘違いしがちな切り分け**:
 
@@ -392,7 +392,7 @@ Origin https://mulmo-demo.pages.dev is not allowed by Access-Control-Allow-Origi
 Status code: 504
 ```
 
-CORS 設定をいくら見直しても直りません。原因は **「サーバーが 504 でタイムアウトしているので CORS ヘッダ自体が返っていない」** だけです。
+このケースでは CORS 設定を見直しても解決しません。原因は **「サーバーが 504 でタイムアウトしているので CORS ヘッダ自体が返っていない」** ためです。
 
 ブラウザのフェッチ API は仕様上、**プリフライトを含むレスポンスに `Access-Control-Allow-Origin` が無いと「CORS エラー」として報告**します。サーバーがダウンしている / ALB やリバースプロキシが 504 を返している場合も、エラー文言は CORS の形をとります。
 
