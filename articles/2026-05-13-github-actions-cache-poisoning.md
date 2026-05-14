@@ -4,6 +4,7 @@ emoji: "🛡️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [githubactions, security, supplychain, npm, ci]
 published: false
+publication_name: singularity
 ---
 
 :::message
@@ -15,6 +16,8 @@ published: false
 2026年5月11日、JavaScript エコシステムで広く使われている TanStack の公式 npm パッケージが改ざんされる事件が発生しました。攻撃名は **「Mini Shai-Hulud（小さな砂虫）」** です。
 
 驚くべきことに、攻撃者は TanStack の本家リポジトリのコードを一行も変えていません。**外部から PR を出しただけ**で、本番リリースに悪意あるコードを混入させることに成功しました。
+
+実際に 42 パッケージ × 84 バージョンが npm に publish され、検出後すぐに deprecate されたものの、tarball が削除されるまでの数時間は install 可能な状態が続きました。その間に `npm install` した環境では、AWS / GCP / GitHub PAT / SSH キー等の credential が窃取され、Worm によって他パッケージへの感染拡大にも利用されました。
 
 この記事では、その仕組みと防ぎ方を丁寧に解説します。
 
@@ -167,7 +170,7 @@ OpenAI / Claude / Codex API を呼んでレビュー実行
 結果をPRにコメント投稿
 ```
 
-この構成では `OPENAI_API_KEY` や `ANTHROPIC_API_KEY` を secrets に入れる必要があります。さらに AI コードレビュー用ワークフローは構造上、**「PR のコードを読む（= fork 側 checkout）」＋「PR にコメントを返す（= secrets が必要）」**の両方を満たすため、今回と同じ `pull_request_target` ＋ fork 側 checkout のパターンになりやすく、**API キー窃取の標的になります**。
+この構成では `OPENAI_API_KEY` や `ANTHROPIC_API_KEY` を secrets に入れる必要があります。さらに AI コードレビュー用ワークフローは構造上、**「PR のコードを読む（= fork 側 checkout）」＋「PR にコメントを返す（= secrets が必要）」** の両方を満たすため、今回と同じ `pull_request_target` ＋ fork 側 checkout のパターンになりやすく、**API キー窃取の標的になります**。
 
 ### サービス型 vs 自前 API 呼び出し型
 
