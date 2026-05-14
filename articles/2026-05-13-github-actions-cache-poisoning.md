@@ -280,7 +280,11 @@ jobs:
 
 Settings → Actions → **"Require approval for first-time contributors"** を有効にすることで、外部コントリビューターの初回 PR は Actions が自動実行されなくなります。
 
-さらに厳しくするなら **"Require approval for all outside collaborators"** に設定することで、2 回目以降の PR も承認が必要になります。
+:::message alert
+**「初回のみ承認」では不十分です。** 攻撃者は無害な PR を 1 回マージしてもらって「信用された contributor」になり、2 回目以降で攻撃を仕掛けられます。2 回目以降は Actions が自動実行されるため、ここを狙うのは典型的な手口です。
+:::
+
+そのため OSS リポジトリでは **"Require approval for all outside collaborators"** にして、org member 以外は毎回承認が必要な設定にすることを推奨します。
 
 ## まとめ
 
