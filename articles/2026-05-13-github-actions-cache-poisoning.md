@@ -278,13 +278,9 @@ jobs:
 
 ### 対策 ③: Branch Protection の設定見直し
 
-Settings → Actions → **"Require approval for first-time contributors"** を有効にすることで、外部コントリビューターの初回 PR は Actions が自動実行されなくなります。
+Settings → Actions → **"Require approval for all outside collaborators"** を有効にして、org member 以外の PR は毎回 Actions の実行に承認を要求する設定にしておくと安全です。
 
-:::message alert
-**「初回のみ承認」では不十分です。** 攻撃者は無害な PR を 1 回マージしてもらって「信用された contributor」になり、2 回目以降で攻撃を仕掛けられます。2 回目以降は Actions が自動実行されるため、ここを狙うのは典型的な手口です。
-:::
-
-そのため OSS リポジトリでは **"Require approval for all outside collaborators"** にして、org member 以外は毎回承認が必要な設定にすることを推奨します。
+軽めの選択肢として **"Require approval for first-time contributors"**（初回 PR のみ承認）もありますが、無害な PR を 1 回通せば次回以降は自動実行される設計のため、攻撃者が「信用を作ってから仕掛ける」余地が残ります。
 
 ### 対策 ④: 機密性の高い処理を public CI に置かない（より根本的な選択肢）
 
