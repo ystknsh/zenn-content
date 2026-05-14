@@ -278,9 +278,21 @@ jobs:
 
 ### 対策 ③: Branch Protection の設定見直し
 
-Settings → Actions → **"Require approval for first-time contributors"** を有効にすることで、外部コントリビューターの初回 PR は Actions が自動実行されなくなります。
+Settings → Actions → **"Require approval for all outside collaborators"** を有効にして、org member 以外の PR は毎回 Actions の実行に承認を要求する設定にしておくと安全です。
 
-さらに厳しくするなら **"Require approval for all outside collaborators"** に設定することで、2 回目以降の PR も承認が必要になります。
+軽めの選択肢として **"Require approval for first-time contributors"**（初回 PR のみ承認）もありますが、無害な PR を 1 回マージしてもらって「信用された Contributor」になり、2回目以降で攻撃を仕掛ける手法もあるので注意が必要です。
+
+### 対策 ④: 機密性の高い処理を public CI に置かない（より根本的な選択肢）
+
+ここまでの対策は「GitHub Actions を正しく設定すれば安全」という前提に立っています。しかし今回の攻撃は「正規の publish パイプラインを乗っ取る」ものであり、設定が完璧でも OIDC トークンが runner のメモリから抜かれた事実は変わりません。
+
+より厳格な防御として、**publish / deploy などの機密性の高い処理は public CI に置かない**という選択肢もあります。
+
+- npm publish や本番デプロイは、AWS の閉域バッチや手元の安全な環境で実行する
+- public な GitHub Actions には「害のない処理（lint / test / build 結果の確認）」だけを置く
+- secrets を public CI に置く以上、CI 環境そのものが攻撃面になる前提を受け入れる
+
+過去にも [CircleCI の 2023 年のセキュリティインシデント](https://circleci.com/blog/jan-4-2023-incident-report/)など、クラウド CI に置いた secrets が漏洩した事例があります。便利さと引き換えに攻撃面が広がることは念頭に置く必要があります。
 
 ## まとめ
 
