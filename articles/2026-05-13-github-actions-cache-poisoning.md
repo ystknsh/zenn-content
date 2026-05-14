@@ -280,7 +280,7 @@ jobs:
 
 Settings → Actions → **"Require approval for all outside collaborators"** を有効にして、org member 以外の PR は毎回 Actions の実行に承認を要求する設定にしておくと安全です。
 
-軽めの選択肢として **"Require approval for first-time contributors"**（初回 PR のみ承認）もありますが、無害な PR を 1 回通せば次回以降は自動実行される設計のため、攻撃者が「信用を作ってから仕掛ける」余地が残ります。
+軽めの選択肢として **"Require approval for first-time contributors"**（初回 PR のみ承認）もありますが、無害な PR を 1 回マージしてもらって「信用された Contributor」になり、2回目以降で攻撃を仕掛ける手法もあるので注意が必要です。
 
 ### 対策 ④: 機密性の高い処理を public CI に置かない（より根本的な選択肢）
 
