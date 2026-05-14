@@ -410,6 +410,10 @@ https://zenn.dev/raycast_jp/articles/2024-08-22-raycast-japan-presentaion-materi
 | `gas` | Google Apps Script | `#GAS` |
 | `gmail` | Gmail | `#Gmail` |
 | `macos` | macOS | `#macOS` |
+| `githubactions` | GitHub Actions | `#GitHubActions` |
+| `ci` | CI / CD 全般 | `#CI` |
+| `security` | セキュリティ全般 | `#Security` |
+| `supplychain` | サプライチェーン攻撃 | `#SupplyChain` |
 
 ### 音声 / メディア
 | topic | 用途 | ハッシュタグ |
