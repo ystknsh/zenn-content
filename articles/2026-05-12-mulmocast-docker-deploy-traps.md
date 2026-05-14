@@ -29,7 +29,7 @@ MulmoCast CLI 固有の話だけでなく、**Puppeteer + 外部生成 API + Doc
 
 ベースイメージは `node:24-slim`。
 
-## 推奨構成（先に結論）
+## 推奨構成
 
 詳細に入る前に、まずは全体像です。各設定の理由は後続のセクションで解説します。
 
@@ -106,11 +106,11 @@ services:
 
 ## 1. Puppeteer (Chrome) の設定
 
-字幕焼き込みモード `mulmo movie -c <lang>` は内部で Puppeteer (Chrome) を起動して HTML をレンダリングします。`node:slim` には Chrome が入っていないため、以下の 4 つの設定が必要です。
+字幕生成コマンド `mulmo movie -c <lang>` は内部で Puppeteer (Chrome) を起動して HTML をレンダリングします。`node:slim` には Chrome が入っていないため、以下の 3 つの設定が必要です。
 
 ### 1.1. Chrome の共有ライブラリと CJK フォントを入れる
 
-Chrome が要求する system shared library 群を `apt-get install` で入れます。日本語以外の字幕も焼くので CJK フォントも必要です。
+Chrome が要求する system shared library 群を `apt-get install` で入れます。今回は日本語以外の字幕も利用したので CJK フォントが必要でした。
 
 ```dockerfile
 RUN apt-get update && \
@@ -141,20 +141,39 @@ RUN apt-get update && \
 バックスラッシュ継続行の途中にコメントを挟むと、シェルはそこで一旦切ってしまい、`libnss3 libnspr4 ...` 以下が「別コマンド扱い」になります。**コメントは継続行の前の行に置く**のが正解です。
 :::
 
-### 1.2. 非 root ユーザーで起動する
+### 1.2. 非 root ユーザー + `--no-sandbox` で起動する
 
-Chrome は root 実行時にサンドボックスが壊れることを前提に、デフォルトで root 起動を拒否します。`--no-sandbox` で逃げるよりも、非 root ユーザーを作るのがセキュリティ的に正解です。
+Chrome を Docker 内で動かすときは、**非 root ユーザー + `--no-sandbox`** の組み合わせが現実解です。経緯は次の通り。
+
+1. **Chrome は root 起動を拒否する**
+
+   ```
+   Running as root without --no-sandbox is not supported.
+   ```
+
+2. **非 root にすると Docker seccomp が Chrome の user namespace 作成を弾く**
+
+   ```
+   Failed to move to new namespace: PID namespaces supported, Network namespace supported,
+   but failed: errno = Operation not permitted
+   ```
+
+3. **seccomp の壁を回避するには `--no-sandbox` が必要**
+
+結果として「非 root + `--no-sandbox`」になります。`--no-sandbox` を使うなら root のままでもいいように思えますが、Docker の中とはいえ root 権限で Chrome を動かす実利はないので、非 root に分けます。
 
 ```dockerfile
 RUN useradd -m appuser && chown -R appuser:appuser /app
 USER appuser
 ```
 
-非 root ユーザーを作らずに起動すると、次のエラーで止まります。
+MulmoCast 内部の `html_render.js` は **`process.env.CI === "true"` のときだけ `--no-sandbox` を付ける**実装なので、環境変数一行で有効化できます。
 
+```dockerfile
+ENV CI=true
 ```
-Running as root without --no-sandbox is not supported.
-```
+
+**`--no-sandbox` のトレードオフ**: Chrome のサンドボックスを外すと、ブラウザ側の脆弱性に対する防御層が一つ減ります。本構成で許容しているのは、レンダリング対象が **自前の HTML（外部ユーザー入力を直接 eval しない）** に限定されており、かつ Docker コンテナ自体が隔離境界として機能しているためです。逆に言うと、**任意の外部 URL を Puppeteer で開く構成ではこの判断は成り立ちません**（CI 環境で `--no-sandbox` が慣例なのと同じ前提です）。
 
 ### 1.3. Puppeteer の自動 DL を切り、apt の chromium を使う
 
@@ -173,28 +192,11 @@ ENV PUPPETEER_CACHE_DIR=/app/.cache/puppeteer
 
 副次効果として、`docker-compose.yml` に `platform` を固定する必要がなくなり、amd64 (EC2) / arm64 (M1 Mac) 両環境で同じ Dockerfile が動きます。
 
-### 1.4. CI=true で --no-sandbox を有効化する
-
-Docker のデフォルト seccomp プロファイルは Chrome の user namespace 作成を弾くため、ここまでの設定だけだと次のエラーが出ます。
-
-```
-Failed to move to new namespace: PID namespaces supported, Network namespace supported,
-but failed: errno = Operation not permitted
-```
-
-MulmoCast 内部の `html_render.js` は **`process.env.CI === "true"` のときだけ `--no-sandbox` を付ける**実装になっているので、Dockerfile に一行入れるだけで解決します。
-
-```dockerfile
-ENV CI=true
-```
-
-**`--no-sandbox` のトレードオフ**: Chrome のサンドボックスを外すと、ブラウザ側の脆弱性に対する防御層が一つ減ります。本構成で許容しているのは、レンダリング対象が **自前の HTML（外部ユーザー入力を直接 eval しない）** に限定されており、かつ Docker コンテナ自体が隔離境界として機能しているためです。逆に言うと、**任意の外部 URL を Puppeteer で開く構成ではこの判断は成り立ちません**（CI 環境で `--no-sandbox` が慣例なのと同じ前提です）。
-
-### 1.5. 外部依存を含まない検証スクリプトを用意する
+### 1.4. 外部依存を含まない検証用の台本 (MulmoScript) を用意する
 
 動画生成パイプラインは複数の外部 API（Replicate / Gemini / OpenAI 等）に依存しているため、エラーが出たときに「Puppeteer なのか、それとも外部 API なのか」切り分けに時間がかかります。
 
-そこで、lip-sync を使わず `imagePrompt` だけで生成する caption 専用テストスクリプトを 1 本用意しておくと、**Puppeteer / Chrome 周りだけを純粋に検証できる**ようになります。本番デプロイ後の sanity check にも使えるので、プロジェクトに常備しておくことを推奨します。
+そこで、今回は caption 専用の検証用台本 (MulmoScript) を 1 本用意しました。**Puppeteer / Chrome 周りだけを純粋に検証できる**ようになりました。本番デプロイ後の sanity check にも使えるので、プロジェクトに常備しておくことを推奨します。
 
 ## 2. アセットコピー — `tsc` だけでは足りない
 
