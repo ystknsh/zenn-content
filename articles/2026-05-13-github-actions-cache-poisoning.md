@@ -3,7 +3,7 @@ title: "「PRを出しただけ」で本番環境が汚染される——GitHub 
 emoji: "🛡️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [githubactions, security, supplychain, npm, ci]
-published: false
+published: true
 publication_name: singularity
 ---
 
