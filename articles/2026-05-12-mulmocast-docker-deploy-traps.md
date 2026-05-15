@@ -204,7 +204,7 @@ ENV PUPPETEER_CACHE_DIR=/app/.cache/puppeteer
 
 TypeScript のサーバーは `tsc` で `dist/` にコンパイルされますが、**JSON / mp3 / png 等はコピーされません**。コピーが漏れると`mulmo audio` / `mulmo movie` を実行した時に次のようなエラーになります。
 
-- JSON - 台本 (MulmoScript) 
+- JSON - 台本 (MulmoScript)
 - mp3 - BGM ファイルを指定する場合
 - png - 参照用画像を準備する場合
 
