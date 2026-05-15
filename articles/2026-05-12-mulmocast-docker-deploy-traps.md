@@ -200,7 +200,7 @@ ENV PUPPETEER_CACHE_DIR=/app/.cache/puppeteer
 
 ## 2. アセットコピー — `tsc` だけでは足りない
 
-TypeScript のサーバーは `tsc` で `dist/` にコンパイルされますが、**JSON / mp3 / png はコピーされません**。`mulmo audio` / `mulmo movie` は実行時にこれらを相対パスで参照するので、コピーが漏れると次のようなエラーになります。
+TypeScript のサーバーは `tsc` で `dist/` にコンパイルされますが、**JSON / mp3 / png はコピーされません**。コピーが漏れると`mulmo audio` / `mulmo movie` を実行した時に次のようなエラーになります。
 
 ```
 Error: AddBGMAgent musicFile not exist: /app/dist/server/mulmo/bgm/bgm-battle.mp3
@@ -285,9 +285,9 @@ const TIMEOUT_MS = 600_000; // 10 minutes ← 短すぎ
 | movie (B-roll) | Veo / Kling 等で挿入動画生成 | 1〜3 分 | 1 beat |
 | compose | ffmpeg で字幕焼き込み + 連結 | 30〜60 秒 | 1 ジョブ |
 
-**支配的なのは lip-sync**。Replicate のキュー待ちが乗ると 1 セグメントだけで 5〜10 分かかることもあり、4 beat 中 3 つで lip-sync を使うと **15〜30 分** が普通のレンジになります。10 分タイムアウトでは半数のジョブが失敗する計算です。
+**支配的なのは lip-sync**。Replicate 側の処理が遅い時は 15 分以上かかることもありました。
 
-推奨は **30 分**です。
+台本(MulmoScript) の内容にもありますが、推奨は **30 分**です。
 
 ```ts
 const TIMEOUT_MS = 1_800_000; // 30 minutes
