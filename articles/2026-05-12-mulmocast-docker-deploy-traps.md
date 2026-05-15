@@ -273,11 +273,7 @@ volumes:
 
 ## 4. CLI のタイムアウトは現実的な値に設定する
 
-`child_process.spawn` の `timeout` オプションを使うとき、楽観的に 10 分などで切ると **本番のジョブが完了前に中断されることがあります**。
-
-```ts
-const TIMEOUT_MS = 600_000; // 10 minutes ← 短すぎ
-```
+`child_process.spawn` の `timeout` オプションを設定する前に、ジョブの実行時間を見積もります。短すぎる値を設定すると、**本番のジョブが完了前に中断されます**。
 
 ### 1 ジョブの実時間内訳（4 beat ニュースの場合）
 
@@ -289,9 +285,7 @@ const TIMEOUT_MS = 600_000; // 10 minutes ← 短すぎ
 | movie (B-roll) | Veo / Kling 等で挿入動画生成 | 1〜3 分 | 1 beat |
 | compose | ffmpeg で字幕焼き込み + 連結 | 30〜60 秒 | 1 ジョブ |
 
-**支配的なのは lip-sync**。Replicate 側の処理が遅い時は 15 分以上かかることもありました。
-
-台本(MulmoScript) の内容にもありますが、推奨は **30 分**です。
+今回の場合、**支配的なのは lip-sync** でした。Replicate 側の処理が遅い時は 15 分以上かかることもありました。台本(MulmoScript) の内容にもよりますが、今回は **30 分** に設定しました。（最初は 10分に設定しており、次項のようなエラーが発生しました。）
 
 ```ts
 const TIMEOUT_MS = 1_800_000; // 30 minutes
@@ -356,7 +350,7 @@ sudo swapon /swapfile
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
 
-ポイント: **メモリの小さいインスタンスで Docker + headless Chrome + Node を動かす場合、swap の設定を本番運用前に確認します**。ただし swap は遅いので、頻繁に使われるなら本来はインスタンスサイズを上げるべきサインです。
+ポイント: **メモリの小さいインスタンスで Docker + headless Chrome + Node を動かす場合、swap の設定を本番運用前に確認します**。インスタンスのメモリを増やすのも選択肢の一つです。
 
 ### 5.2. EBS の空き容量と、定期的なイメージクリーンアップ
 
@@ -379,11 +373,7 @@ docker builder prune -a -f
 推奨設定（**単一サービスを動かしているホストを前提**）:
 
 - `scripts/deploy-backend.sh` 等の **デプロイスクリプトに `docker system prune -f` を入れて、毎回ビルド前に古いものを削る**
-- EBS のサイズを増やす（8GB デフォルトはこの種のアプリには小さいので、**最低 30〜50GB** は欲しい）
-
-:::message
-**同一ホストで複数サービスを動かしている場合の注意**: `docker system prune -a -f` は他サービスの未使用イメージやキャッシュも削除します。共用ホストでは、対象のイメージタグを指定した `docker image prune` や、対象プロジェクトに絞ったクリーンアップに切り替えてください。
-:::
+- EBS のサイズを増やす
 
 ポイント: **「ローカルは通って本番だけ失敗する Docker build」では、最初にディスク容量を確認します**。次に CPU アーキテクチャ、続いてプロキシ・DNS・rate limit です。
 
@@ -404,25 +394,9 @@ Status code: 504
 
 ポイント: **CORS エラーが突然出始めたら、まずはサーバー側の生存確認を疑う**。CORS 設定を弄り始めるのはその後です。
 
-## まとめ — チェックリスト
+## まとめ 
 
-MulmoCast CLI を Web サービスに組み込むときに確認したい項目をまとめました。
-
-- [ ] Chrome 共有ライブラリ群 + `fonts-noto-cjk` を apt で入れた
-- [ ] Dockerfile のシェル継続行の途中にコメントを書いていない
-- [ ] 非 root ユーザーで起動している（`useradd -m appuser` + `USER appuser`）
-- [ ] Puppeteer の自動 DL を切り、apt の `chromium` を使っている
-- [ ] `ENV CI=true` で MulmoCast に `--no-sandbox` を付けさせている
-- [ ] `tsc` 後にテンプレート / BGM / 画像 / news data / news scripts を `dist/` にコピーしている
-- [ ] volume マウント先が `/app/dist/server/output`（コンパイル後パス）になっている
-- [ ] CLI の timeout が外部 API 込みの現実的な値（30 分前後）になっている
-- [ ] 本番コンテナで動いている commit hash が確認できる（`/api/health` で返す等）
-- [ ] EC2 ホストに swap を設定している（t3.small/medium クラスはデフォルトで swap なし）
-- [ ] EBS が十分に空いている（最低 30〜50GB 推奨）+ デプロイスクリプトに `docker system prune -f` を入れている
-- [ ] CORS エラーが出たらまずサーバー生存確認（504 が CORS 風に見えるため）
-- [ ] 外部依存（Replicate / OpenAI 等）を含まない最小再現スクリプトをプロジェクトに常備している
-
-MulmoCast CLI を Web サービスに組み込む際は、この構成をベースに始めることを推奨します。Puppeteer + 外部生成 API + Docker の組み合わせ全般に応用できる内容なので、類似のサービスを作るときの参考にもなるはずです。
+MulmoCast CLI を Web サービスに組み込む過程で踏んだポイントを、推奨構成という形でまとめました。Puppeteer・アセットコピー・ボリュームマウント・タイムアウト・EC2 リソースは、最初から押さえておくと本番でのつまずきが減らせると思います。ぜひ参考にして、MulmoCast CLI をご自身のサービスに組み込んでみてください。
 
 ## 参考リンク
 
