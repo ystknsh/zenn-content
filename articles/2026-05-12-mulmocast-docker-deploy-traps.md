@@ -200,7 +200,11 @@ ENV PUPPETEER_CACHE_DIR=/app/.cache/puppeteer
 
 ## 2. アセットコピー — `tsc` だけでは足りない
 
-TypeScript のサーバーは `tsc` で `dist/` にコンパイルされますが、**JSON / mp3 / png はコピーされません**。コピーが漏れると`mulmo audio` / `mulmo movie` を実行した時に次のようなエラーになります。
+TypeScript のサーバーは `tsc` で `dist/` にコンパイルされますが、**JSON / mp3 / png 等はコピーされません**。コピーが漏れると`mulmo audio` / `mulmo movie` を実行した時に次のようなエラーになります。
+
+- JSON - 台本 (MulmoScript) 
+- mp3 - BGM ファイルを指定する場合
+- png - 参照用画像を準備する場合
 
 ```
 Error: AddBGMAgent musicFile not exist: /app/dist/server/mulmo/bgm/bgm-battle.mp3
