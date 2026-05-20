@@ -53,7 +53,7 @@ Replicate経由でも、Flux、Ideogram、Recraft、Stable Diffusion、Luma Phot
 
 ![sample_gpt_image_2](/images/release_v1_0_14_script/misc_sample_gpt_image_2.png)
 
-gpt-image-2 と Seedance 2.0 で生成した映像です。
+gpt-image-2 で生成した画像です。この画像を元に Seedance 2.0 で生成した映像は、末尾の動画からご覧いただけます。
 
 ## 2. 並列実行数の設定UI
 
