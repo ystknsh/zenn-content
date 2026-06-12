@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/ystknsh/zenn-content#readme",
   "dependencies": {
-    "zenn-cli": "^0.4.7"
+    "zenn-cli": "^0.4.8"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
