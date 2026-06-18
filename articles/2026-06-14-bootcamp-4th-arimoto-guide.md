@@ -3,7 +3,7 @@ title: "半年〜1年の「長期ハッカソン」をどう走るか——Singu
 emoji: "🏕️"
 type: "idea"
 topics: ["bootcamp", "hackathon", "vibecoding", "community"]
-published: false
+published: true
 publication_name: singularity
 ---
 
