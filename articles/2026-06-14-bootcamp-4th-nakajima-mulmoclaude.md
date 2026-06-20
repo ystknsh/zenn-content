@@ -16,6 +16,10 @@ https://github.com/receptron/mulmoclaude
 第4期の募集はすでに締め切っています。Bootcamp の概要は[こちら](https://github.com/SingularitySociety/societys_statement/blob/main/bootcamp.md)、過去の開催概要は[こちら](https://singularitysociety.org/activities/bootcamp/)をご覧ください。
 :::
 
+本セッションのアーカイブ動画は YouTube で公開しています。
+
+https://youtu.be/AfsTkYg6pZc
+
 ---
 
 中島です。ご参加ありがとうございます。
