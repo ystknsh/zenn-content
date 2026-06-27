@@ -3,7 +3,7 @@ title: "コードを書かずに、MulmoClaude で note 記事をアニメーシ
 emoji: "🎬"
 type: "idea"
 topics: [mulmoclaude, mulmocast, animation, 動画生成, claudecode]
-published: false
+published: true
 publication_name: singularity
 ---
 
@@ -45,12 +45,19 @@ https://www.youtube.com/watch?v=YnW6X4DITpA
 
 ### 1. 記事の URL と「条件」を渡す
 
-最初に送ったのは、記事の URL と、ざっくりした条件だけです。
+最初に送ったのは、記事の URL と条件です。
 
-> このページを読んで、プレゼン動画を作ってください。
-> ・ダイジェストでOK
-> ・図版は note のものを使って（画像の自動生成は使わないで）
-> ・気になることがあれば聞いてください
+> https://note.com/yusukehorie/n/ned652c8c02b0
+> これを読んで、プレゼン動画を作成してください。
+>
+> 条件
+> 1 mulmoscript で作成する
+> 2 スライドは html tailwind をベースで作成する
+> 3 html tailwind でアニメーションを作っても良い。
+> 4 挿入画像は note から取得する
+> 5 画像生成は使わない
+>
+> そのほか気になることは聞いてください。
 
 ### 2. 聞かれたことを選ぶだけ
 
