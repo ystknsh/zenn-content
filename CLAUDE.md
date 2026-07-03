@@ -39,7 +39,16 @@ published_at: 2024-12-02 11:45  # 公開日時（オプション）
 - 技術解説や開発ツールの紹介は`tech`
 - プロダクト紹介やイベントレポートは`idea`または`tech`
 - `topics`は2〜5個程度、関連性の高いキーワードを選択
-- `publication_name`で`raycast_jp`や`singularity`などのパブリケーションに投稿
+- `publication_name`は記事のテーマで使い分ける（下表）
+
+**publication_name の使い分け：**
+
+| publication_name | 対象 |
+|------------------|------|
+| `singularity` | MulmoCast / MulmoClaude / AI・LLM 系全般 |
+| `raycast_jp` | Raycast 関連 |
+| `matsuolab` | 松尾研関連のイベント・活動 |
+| （指定なし） | 上記に当てはまらない個人記事 |
 
 ---
 
@@ -273,13 +282,12 @@ GraphAI[^1]、生産性向上ツール「Raycast[^2]」
 ### 2. 画像の挿入パターン
 
 ```markdown
-![File Selection Dialog 1](/images/release_v1_0_5_script/1p.png)
-
-![](/images/20241123-raycast/20241123-sponsors.png)
+![起動画面](/images/2026-06-22-mulmoclaude-launch-guide/launch-screen.png)
 ```
 
-- `/images/`配下に記事ごとのフォルダを作成
-- わかりやすいファイル名を使用（1p.png, 2p.png など）
+- `/images/`配下に**記事ファイル名と同じスラッグ**のフォルダを作成する
+  - 例: 記事 `articles/2026-06-22-mulmoclaude-launch-guide.md` → 画像 `images/2026-06-22-mulmoclaude-launch-guide/`
+- ファイル名は内容がわかる名前にする（`launch-screen.png` など）
 
 ### 3. リンクの記載方法
 
@@ -370,9 +378,32 @@ https://zenn.dev/raycast_jp/articles/2024-08-22-raycast-japan-presentaion-materi
 
 ---
 
+## プロダクト用語集
+
+記事内で繰り返し登場するプロダクトの説明・リンクの定型です。説明の揺れ・誤りを防ぐため、この表記に従ってください。
+
+| プロダクト | 説明 | リンク定型 |
+|-----------|------|-----------|
+| MulmoClaude | Claude Code をエンジンに使うローカルアプリ（プラットフォーム） | `[MulmoClaude](https://github.com/receptron/mulmoclaude)` |
+| MulmoCast | MulmoScript から動画とテキストを同時生成するツール | `[MulmoCast](https://mulmocast.com)` |
+
+- ❌ MulmoClaude を「Claude Code プラグイン」と書かない（過去記事に誤記あり）
+- ✅ 「Claude Code をエンジンに使うローカルアプリ」と書く
+
+---
+
 ## topics 一覧
 
-記事のフロントマターで使用する topics の表記揺れを防ぐための一覧です。新しい topic を追加する場合はここにも追記してください。
+記事のフロントマターで使用する topics の表記揺れを防ぐための一覧です。**この一覧は x-post skill がハッシュタグ生成のマッピング元として参照します。** 一覧に無い topic は「`#` + 先頭大文字化」の fallback になり、`mulmoclaude` → `#Mulmoclaude` のような誤ったハッシュタグが生成されるため、新しい topic を使ったら必ずここにも追記してください。
+
+**表記ルール：**
+
+- 英語 topic はすべて小文字で書く（✅ `raycast` / ❌ `Raycast`）
+- 新しい topic を付ける前に、既存記事での表記を確認して揺れを防ぐ:
+
+```bash
+grep -h '^topics:' articles/*.md | tr -d '[]'
+```
 
 ### AI / LLM 関連
 | topic | 用途 | ハッシュタグ |
@@ -384,15 +415,22 @@ https://zenn.dev/raycast_jp/articles/2024-08-22-raycast-japan-presentaion-materi
 | `claude` | Claude 全般 | `#Claude` |
 | `claudecode` | Claude Code | `#ClaudeCode` |
 | `o1` | OpenAI o1 | `#o1` |
+| `openai` | OpenAI | `#OpenAI` |
 | `grok` | Grok | `#Grok` |
 | `graphai` | GraphAI | `#GraphAI` |
+| `huggingface` | Hugging Face | `#HuggingFace` |
+| `geniac` | GENIAC | `#GENIAC` |
 
 ### プロダクト / ツール
 | topic | 用途 | ハッシュタグ |
 |-------|------|------------|
 | `mulmocast` | MulmoCast | `#MulmoCast` |
+| `mulmoclaude` | MulmoClaude | `#MulmoClaude` |
 | `raycast` | Raycast | `#Raycast` |
 | `x` | X（Twitter） | `#X` |
+| `slack` | Slack | `#Slack` |
+| `googlechrome` | Google Chrome | `#GoogleChrome` |
+| `codepen` | CodePen | `#CodePen` |
 | `agentskills` | Claude Code プラグイン / Agent Skills | `#AgentSkills` |
 | `plugin` | プラグイン開発 | `#Plugin` |
 
@@ -410,10 +448,17 @@ https://zenn.dev/raycast_jp/articles/2024-08-22-raycast-japan-presentaion-materi
 | `gas` | Google Apps Script | `#GAS` |
 | `gmail` | Gmail | `#Gmail` |
 | `macos` | macOS | `#macOS` |
+| `github` | GitHub | `#GitHub` |
 | `githubactions` | GitHub Actions | `#GitHubActions` |
 | `ci` | CI / CD 全般 | `#CI` |
+| `docker` | Docker | `#Docker` |
+| `ec2` | Amazon EC2 | `#EC2` |
 | `security` | セキュリティ全般 | `#Security` |
 | `supplychain` | サプライチェーン攻撃 | `#SupplyChain` |
+| `vibecoding` | Vibe Coding（AI 主導の開発スタイル） | `#VibeCoding` |
+| `chartjs` | Chart.js | `#ChartJS` |
+| `applescript` | AppleScript | `#AppleScript` |
+| `pymupdf` | PyMuPDF | `#PyMuPDF` |
 
 ### 音声 / メディア
 | topic | 用途 | ハッシュタグ |
@@ -423,6 +468,10 @@ https://zenn.dev/raycast_jp/articles/2024-08-22-raycast-japan-presentaion-materi
 | `azure` | Azure（TTS 等） | `#Azure` |
 | `vertexai` | Vertex AI | `#VertexAI` |
 | `動画生成` | 動画生成 | `#動画生成` |
+| `video` | 動画全般 | `#Video` |
+| `animation` | アニメーション | `#Animation` |
+| `imagegeneration` | 画像生成 | `#ImageGeneration` |
+| `kenburns` | Ken Burns エフェクト | `#KenBurns` |
 | `字幕` | 字幕 | `#字幕` |
 | `アルゴリズム` | アルゴリズム | `#アルゴリズム` |
 
@@ -430,7 +479,8 @@ https://zenn.dev/raycast_jp/articles/2024-08-22-raycast-japan-presentaion-materi
 | topic | 用途 | ハッシュタグ |
 |-------|------|------------|
 | `iphone` | iPhone | `#iPhone` |
-| `世界モデル` | 世界モデルベンチマーク |
+| `applewatch` | Apple Watch | `#AppleWatch` |
+| `世界モデル` | 世界モデルベンチマーク | `#世界モデル` |
 
 ---
 
@@ -438,7 +488,17 @@ https://zenn.dev/raycast_jp/articles/2024-08-22-raycast-japan-presentaion-materi
 
 - 記事ファイル名は `YYYY-MM-DD-記事スラッグ.md` の形式にする
 - 例: `2026-02-07-claude-code-extensibility-memo.md`
-- 日付は記事作成日または公開予定日を使用
+- 日付は記事作成日または公開予定日を使用（日付は `date` コマンドで取得する）
+
+---
+
+## 記事作成〜公開のワークフロー
+
+1. 記事ファイルを `articles/YYYY-MM-DD-記事スラッグ.md` として作成する
+2. フロントマターは `published: false`（下書き）で作成する
+3. `npx zenn preview` でローカルプレビューを確認する
+4. 公開するときに `published: true` へ変更する
+5. 公開後、x-post skill（`/x-post <記事ファイル名>`）で X への投稿を提案する
 
 ---
 
@@ -479,8 +539,9 @@ https://zenn.dev/raycast_jp/articles/2024-08-22-raycast-japan-presentaion-materi
 - [ ] `emoji`は内容に合っているか
 - [ ] `type`は`tech`/`idea`を適切に選択
 - [ ] `topics`は2〜5個、関連性の高いものを選択
-- [ ] `published`の設定は適切か
-- [ ] `publication_name`は必要に応じて設定
+- [ ] `topics`は「topics 一覧」の表記に従っているか（新しい topic は一覧にも追記）
+- [ ] `published`の設定は適切か（新規記事は`false`で作成）
+- [ ] `publication_name`は使い分け表に従って設定
 
 ### 構成
 - [ ] 冒頭で記事の目的や対象読者を明記
@@ -488,7 +549,7 @@ https://zenn.dev/raycast_jp/articles/2024-08-22-raycast-japan-presentaion-materi
 - [ ] コードブロックに説明コメントを追加
 - [ ] 重要な箇所に絵文字（✅❌🔥）を使用
 - [ ] 表を使って情報を整理
-- [ ] 画像は`/images/`配下に適切に配置
+- [ ] 画像は`/images/<記事ファイル名と同じスラッグ>/`配下に配置
 
 ### 文体
 - [ ] 丁寧で親しみやすい語り口
