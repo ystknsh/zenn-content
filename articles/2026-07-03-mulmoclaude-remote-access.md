@@ -3,7 +3,7 @@ title: "MulmoClaude のリモートアクセス機能 — スマホからコレ�
 emoji: "📱"
 type: "tech"
 topics: [mulmoclaude, claudecode, ai]
-published: false
+published: true
 publication_name: singularity
 ---
 
