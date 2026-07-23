@@ -9,6 +9,8 @@ publication_name: singularity
 
 :::message
 この記事は、[MulmoClaude](https://github.com/receptron/mulmoclaude) を使って note の記事を 1 本のプレゼン動画に仕立てた記録です。記事そのものも、MulmoClaude と一緒に書きました。
+
+MulmoClaude の概要・インストール方法・活用ガイドは [Singularity Society の完全ガイド](https://singularitysociety.org/projects/ai/mulmoclaude/) もあわせてご覧ください。
 :::
 
 ## はじめに
