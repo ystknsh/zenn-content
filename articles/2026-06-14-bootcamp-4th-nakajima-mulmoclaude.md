@@ -13,6 +13,8 @@ publication_name: singularity
 MulmoClaude のソースコードは GitHub で公開されています。
 https://github.com/receptron/mulmoclaude
 
+MulmoClaude の概要・インストール方法・活用ガイドは [Singularity Society の完全ガイド](https://singularitysociety.org/projects/ai/mulmoclaude/) もあわせてご覧ください。
+
 第4期の募集はすでに締め切っています。Bootcamp の概要は[こちら](https://github.com/SingularitySociety/societys_statement/blob/main/bootcamp.md)、過去の開催概要は[こちら](https://singularitysociety.org/activities/bootcamp/)をご覧ください。
 :::
 
