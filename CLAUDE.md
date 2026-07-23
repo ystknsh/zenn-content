@@ -389,7 +389,7 @@ https://zenn.dev/raycast_jp/articles/2024-08-22-raycast-japan-presentaion-materi
 
 - ❌ MulmoClaude を「Claude Code プラグイン」と書かない（過去記事に誤記あり）
 - ✅ 「Claude Code をエンジンに使うローカルアプリ」と書く
-- ✅ MulmoClaude を主題にした記事では、冒頭の `:::message` または `:::details` ブロック内に Singularity Society の完全ガイド（`https://singularitysociety.org/projects/ai/mulmoclaude/`）へのリンクを裸 URL で入れる
+- ✅ MulmoClaude を主題にした記事では、冒頭の `:::message` または `:::details` ブロック内に Singularity Society の完全ガイド（`https://singularitysociety.org/projects/ai/mulmoclaude/`）へのリンクを URL がそのまま見える形式で入れる
 
 ---
 
