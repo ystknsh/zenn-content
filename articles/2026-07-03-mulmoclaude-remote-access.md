@@ -13,6 +13,7 @@ MulmoClaude の新機能を、Claude を活用して整理しました。
 
 :::details MulmoClaude をはじめて知る人へ — 手元のPCで動く、会話で使える AI アプリです。ターミナルで npx mulmoclaude@latest を実行すればすぐ起動できます。
 📦 GitHub（紹介・インストール手順）: https://github.com/receptron/mulmoclaude
+📖 MulmoClaude 完全ガイド（概要・インストール・活用ガイド）: https://singularitysociety.org/projects/ai/mulmoclaude/
 🎥 動画で知る（中島聡さんによる紹介・デモ）:
 - [LLMが主役の「自分専用アプリ」MulmoClaude デモ](https://www.youtube.com/watch?v=AfsTkYg6pZc)
 - [誰でも作れる！自分専用データベースアプリ。MulmoClaude](https://www.youtube.com/watch?v=kNmSKcWDrlw)
