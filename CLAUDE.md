@@ -439,6 +439,7 @@ grep -h '^topics:' articles/*.md | tr -d '[]'
 | topic | 用途 | ハッシュタグ |
 |-------|------|------------|
 | `cli` | CLI ツール | `#CLI` |
+| `astro` | Astro（静的サイトジェネレータ） | `#Astro` |
 | `development` | 開発全般 | `#Development` |
 | `開発環境` | 開発環境の構築・設定 | `#開発環境` |
 | `自動化` | ワークフロー自動化 | `#自動化` |
@@ -454,7 +455,9 @@ grep -h '^topics:' articles/*.md | tr -d '[]'
 | `ci` | CI / CD 全般 | `#CI` |
 | `docker` | Docker | `#Docker` |
 | `ec2` | Amazon EC2 | `#EC2` |
+| `firebase` | Firebase（Hosting 等） | `#Firebase` |
 | `security` | セキュリティ全般 | `#Security` |
+| `seo` | SEO / 検索流入 | `#SEO` |
 | `supplychain` | サプライチェーン攻撃 | `#SupplyChain` |
 | `vibecoding` | Vibe Coding（AI 主導の開発スタイル） | `#VibeCoding` |
 | `chartjs` | Chart.js | `#ChartJS` |
