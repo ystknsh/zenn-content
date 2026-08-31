@@ -3,7 +3,7 @@ title: "GitHub Pages のドキュメントにデモ動画を埋め込む際の�
 emoji: "🎬"
 type: "tech"
 topics: [github, video, 字幕]
-published: false
+published: true
 publication_name: singularity
 ---
 
